@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuário</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #80DDF2;
+            font-family: 'Roboto', Helvetica, sans-serif;
+        }
+
+        ::selection {
+            background-color: #3ea0c4;
+            color: white;
+        }
+        nav {
+            background-color: #1B67B3;
+            color: white;
+            padding:20px;
+            box-shadow:1px 1px 15px rgba(0, 0, 0, 0.303); 
+        }
+
+        nav > h1 {
+            font-family: 'Orbitron', Helvetica, sans-serif;
+            font-size: 40px;
+            text-align: center;
+            padding: 60px 0px;
+            font-weight: 400;
+        }
+
+        #link_menu {
+            color: white;
+            text-decoration: none;
+        }
+
+        #link_menu:hover {
+            background-color: #1B2D5E;
+            padding: 0px;
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+
+        a {
+            color: rgb(9, 76, 182);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+
+        a:hover {
+            text-decoration: underline;
+            background-color: #abbef36a;
+            padding: 5px;
+            color: rgb(3, 10, 67);
+        }
+
+        #menu {
+            background-color: #1B2D5E;
+            border-radius: 5px;
+            width: 75px;
+            height: 20px;
+            padding: 10px;
+            margin-left: auto;
+            display: inline-block;
+        }
+
+        h2 {
+            margin: 0;
+            font-family: 'Audiowide', sans-serif;
+            font-weight: 100;
+            padding: 10px 0px;
+        }
+
+        section {
+            margin: auto;
+            margin-top: 30px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        div {
+            background-color: #0056b3;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-image: url('');
+            background-position: center top;
+            background-repeat: no-repeat;
+            margin: auto;
+            margin: 10px 0px;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        textarea {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #34aaff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #redes-sociais ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #redes-sociais ul li {
+            margin-bottom: 10px;
+        }
+
+        #redes-sociais a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #redes-sociais a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        footer {
+            background-color: #28847E;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer p {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Seu perfil</h1>
+            <span id="menu"><a href="" id="link_menu">Conclusão</a></span>
+            <span id="menu"><a href="index.html" id="link_menu">◀  Voltar</a></span>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="info-basica">
+            <h2>Informações Básicas</h2>
+            <form id="form-info-basica">
+                <label for="foto-perfil">
+                    Foto de Perfil:
+                    <div></div>
+                    <input type="file" id="foto-perfil" name="foto-perfil" accept="image/*">
+                </label>
+                <br>
+                <label for="nome-usuario">
+                    Nome:
+                    <input type="text" id="nome-usuario" name="nome-usuario" placeholder="Digite seu nome">
+                </label>
+                <br>
+                <label for="bio-usuario">
+                    Bio:
+                    <textarea id="bio-usuario" name="bio-usuario" rows="4" placeholder="Uma breve biografia sobre você..."></textarea>
+                </label>
+                <br>
+                <button type="submit">Salvar Informações</button>
+            </form>
+        </section>
+        
+        <section id="preferencias">
+            <h2>Preferências de Notificação</h2>
+            <form id="form-notificacoes">
+                <label for="email-notificacoes">
+                    <input type="checkbox" id="email-notificacoes" name="email-notificacoes">
+                    Receber notificações por e-mail
+                </label>
+                <br>
+                <label for="sms-notificacoes">
+                    <input type="checkbox" id="sms-notificacoes" name="sms-notificacoes">
+                    Receber notificações por SMS
+                </label>
+                <br>
+                <button type="submit">Salvar Preferências</button>
+            </form>
+        </section>
+        
+        <section id="suporte">
+            <h2>Suporte e Feedback</h2>
+            <form id="form-feedback">
+                <label for="sugestoes">
+                    Sugestões, dúvidas ou reclamações:
+                    <textarea id="sugestoes" name="sugestoes" rows="4" placeholder="Digite aqui..."></textarea>
+                </label>
+                <br>
+                <button type="submit">Enviar Feedback</button>
+            </form>
+        </section>
+        
+        <section id="redes-sociais">
+            <h2>Redes Sociais do Site</h2>
+            <ul>
+                <li><a href="https://facebook.com/seusite" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/seusite" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com/seusite" target="_blank">Instagram</a></li>
+                <li><a href="https://linkedin.com/company/seusite" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Página criada por Camila Soares</p>
+    </footer>
+</body>
+</html>

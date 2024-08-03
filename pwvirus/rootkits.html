@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--by bubu!-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/malware.png" type="image/x-icon">
+    <title>Rootkits</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        :root {
+            --txp:'Roboto', Helvetica, sans-serif;
+            --tnav:'Orbitron', Helvetica, sans-serif;
+            --tp:'Audiowide', Helvetica, sans-serif;
+            --cor1:#80DDF2;
+            --cor2:#1B67B3;
+            --cor3:#1B2D5E;
+        }
+
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-family: var(--txp);
+            background-color: var(--cor1);
+        }
+
+        ::selection {
+            background-color: #3EA0C4;
+            color: white;
+        }
+
+        nav {
+            background-color: var(--cor2);
+            color: white;
+            padding: 20px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);
+        }
+
+        nav > h1 {
+            font-family: 'Orbitron', Helvetica, sans-serif;
+            font-size: 40px;
+            text-align: center;
+            padding: 80px 0px;
+        }
+
+        #link_menu {
+            text-decoration: none;
+            color: white;
+        }
+
+        #link_menu:hover {
+            background-color: #1B2D5E;
+            padding: 0px;
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+
+        a {
+            color: rgb(9, 76, 182);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: #abbef36a;
+            padding: 5px;
+            color: rgb(3, 10, 67);
+        }
+
+        #menu {
+            background-color: var(--cor3);
+            border-radius: 5px;
+            width: 75px;
+            height: 20px;
+            padding: 10px;
+            margin-left: auto;
+            display: inline-block;
+        }
+        
+        h1, h2 {
+            font-family: var(--tp);
+            font-weight: 100;
+            padding: 10px;
+        }
+
+        h3 {
+            font-family: var(--txp);
+        }
+
+        main {
+            min-width: 300px;
+            max-width: 800px;
+            background-color: white;
+            margin: auto;
+            padding: 20px 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.351);
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        .img_resp{
+            max-width: 100%;
+            height: auto;
+        }
+
+        main p {
+            text-align: justify;
+            line-height: 1.8em;
+            margin: 15px 0px;
+        }
+
+        aside {
+            background-color: rgb(165, 222, 249);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        aside > h3 {
+            font-family: var(--tp);
+            font-weight: lighter;
+        }
+
+        footer {
+            background-color: var(--cor2);
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer p {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Rootkits</h1>
+            <span id="menu"><a href="" id="link_menu">Conclusão</a></span>
+            <span id="menu"><a href="index.html" id="link_menu">◀  Voltar</a></span>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>O que é um Rootkits?</h1>
+            <p>Um rootkit é um software usado por criminosos cibernéticos para obter controle sobre um computador ou rede alvo. Os Rootkits podem por vezes aparecer como uma única peça de software, mas são frequentemente compostos por uma coleção de ferramentas que permitem aos hackers o controle a nível de administrador sobre o dispositivo alvo.</p>
+
+            <p>Os Rootkits operam perto ou dentro do kernel do sistema operacional, o que lhes dá a capacidade de iniciar comandos para o computador. Qualquer coisa que utilize um sistema operacional é um alvo potencial para um rootkit – que, à medida que a Internet das Coisas se expande, pode incluir itens como o seu refrigerador ou termostato.</p>
+
+            <p>Rootkits podem esconder keyloggers, que capturam as suas teclas sem o seu consentimento. Isto facilita aos criminosos cibernéticos roubar as suas informações pessoais, tais como dados de cartão de crédito ou dados bancários online. Rootkits podem permitir que hackers usem seu computador para lançar ataques DDoS ou enviar e-mails de spam. Eles podem até desativar ou remover o software de segurança.</p>
+
+            <p>Alguns rootkits são usados para fins legítimos – por exemplo, fornecer suporte remoto de TI ou auxiliar o aplicativo da lei. Na maioria das vezes, porém, são usados para fins maliciosos. O que torna os rootkits tão perigosos são as várias formas de malware que eles podem entregar, que podem manipular o sistema operacional de um computador e fornecer aos usuários remotos acesso administrativo.</p>
+            <div style="text-align: center;">
+                <img class="img_resp" src="imagens/rootkits.jpeg" alt="botnet" style="width: 650px;">
+            </div>
+            <h2>Como um Rootkit age?</h2>
+            <p>
+                Primeiro, o rootkit precisa infectar o dispositivo. Para isto, os hackers usam várias técnicas para induzir as vítimas a baixar o conteúdo malicioso: eles disfarçam o rootkit como se ele fosse um programa legítimo, um aplicativo confiável ou qualquer coisa do tipo.
+            </p>
+            <p>
+                Ou enviam e-mails com links e anexos infectados, através de estratégias de phishing (ou qualquer estratégia de ataque de engenharia social). Quando a vítima clica em algum destes links ou baixa qualquer um destes programas, ela abre brechas para que o rootkit se instale no sistema. Depois de infectar e se alojar no sistema, o rootkit começa a agir sem que a vítima perceba e sem que a maioria dos mecanismos de defesa consigam detectá-lo.
+            </p>
+            <p>
+                Nesta etapa, os rootkits dão aos hackers praticamente o controle total do dispositivo infectado e, em muitos casos, o domínio total sobre o sistema. Os criminosos conseguem executar arquivos, fazer alterações nas configurações do sistema, roubar informações pessoais sensíveis, monitorar as atividades da vítima, usar funções de keylogger para descobrir senhas e credenciais (como dados de cartão de crédito, de e-mail e de redes sociais, por exemplo) e uma série de mudanças.
+            </p>
+            <p>
+                Estas alterações incluem configurações de segurança, o que permite que os cibercriminosos consigam disseminar vários outros tipos de malware e até transformar o dispositivo em parte de uma rede botnet usada para executar ataques DDoS.
+            </p>
+            <h2>Tipos de Rootkits</h2>
+            <h3>Hardware ou rootkit de firmware</h3>
+            <p>
+                Os rootkits de hardware ou firmware podem afetar seu disco rígido, seu roteador ou a BIOS de seu sistema, que é o software instalado em um pequeno chip de memória na placa-mãe do seu computador. Em vez de ter como alvo o sistema operacional, eles visam o firmware do seu dispositivo para instalar malware, que é difícil de detectar. Porque afetam o hardware, permitem aos hackers registrar tudo que você tecla, bem como monitorizar a atividade online. Embora menos comuns que outros tipos, os rootkits de hardware ou firmware são uma grave ameaça à segurança online.
+            </p>
+            <h3>Rootkit do carregador de inicialização</h3>
+            <p>
+                O mecanismo do carregador de inicialização é responsável por carregar o sistema operacional em um computador. Os rootkits do carregador de inicialização atacam o sistema, substituindo o carregador de inicialização legítimo do seu computador por um alterado. Isto ativa o rootkit mesmo antes do sistema operacional do seu computador estar totalmente carregado.
+            </p>
+            <h3>Rootkit de memória</h3>
+            <p>
+                Os rootkits de memória escondem-se na memória RAM e utilizam os recursos do seu computador para realizar atividades maliciosas em segundo plano. Os rootkits de memória afetam o desempenho da memória RAM do seu computador. Como eles só vivem na RAM do seu computador e não injetam um código permanente, os rootkits de memória desaparecem assim que você reinicia o sistema – embora às vezes não seja tão fácil se livrar deles. A sua curta duração significa que tendem a não ser percebidos como uma ameaça significativa.
+            </p>
+            <h3>Rootkit de aplicativos</h3>
+            <p>
+                Os rootkits de aplicativos substituem os arquivos padrão em seu computador por arquivos rootkit e podem até mudar a maneira como os aplicativos padrão funcionam. Estes rootkits infectam programas como o Microsoft Office, Notepad, ou Paint. Os criminosos podem obter acesso ao seu computador cada vez que você executar esses programas. Como os programas infectados ainda rodam normalmente, a detecção de rootkit é difícil para os usuários – mas os programas antivírus podem detectá-los, pois ambos operam na camada do aplicativo.
+            </p>
+            <h3>Rootkits em modo Kernel</h3>
+            <p>
+                Os rootkits em modo Kernel estão entre os tipos mais severos desta ameaça, pois visam o núcleo do seu sistema operacional (ou seja, o nível kernel). Os hackers os usam, não só para acessar os arquivos no seu computador, mas também para alterar a funcionalidade do seu sistema operacional, adicionando seu próprio código. 
+            </p>
+            <h3>Rootkits virtuais</h3>
+            <p>
+                Um rootkit virtual se instala em segundo plano no sistema operacional do computador. Em seguida, hospeda os sistemas operacionais de destino como uma máquina virtual, o que lhe permite interceptar chamadas de hardware feitas pelo sistema operacional original. Este tipo de rootkit não tem que modificar o kernel para corromper o sistema operacional e pode ser muito difícil de detectar.
+            </p>
+            <h2>Sinais de infecção de um Rootkit</h2>
+            <p><strong>Comportamento Incomum:</strong> Mudanças inesperadas no comportamento do sistema, como lentidão, falhas frequentes, ou funções que não estão operando corretamente, podem ser sinais de que um rootkit está presente.</p>
+
+            <p><strong>Arquivos e Processos Desconhecidos:</strong> Presença de arquivos ou processos desconhecidos ou suspeitos no sistema, especialmente se eles parecem estar ocultos ou não podem ser facilmente acessados.</p>
+            
+            <p><strong>Alterações nas Configurações do Sistema:</strong> Configurações do sistema alteradas sem a sua permissão, como mudanças nas permissões de arquivos ou configurações de segurança.</p>
+            
+            <p><strong>Conexões de Rede Suspeitas:</strong> Atividade de rede incomum ou desconhecida, como conexões de rede inesperadas ou tráfego que não pode ser identificado.</p>
+        </article>
+        <aside>
+            <h1 style="text-align: center;">Caso Real</h1>
+            <h3>Sony BMG, Rootkit, 2005</h3>
+            <p>Um caso notável de rootkit é o "Sony BMG rootkit". Em 2005, a Sony BMG lançou CDs de música com um software de proteção contra cópias que, inadvertidamente, incluía um rootkit. Esse rootkit se escondia no sistema operacional dos usuários e ocultava arquivos e processos relacionados ao software de proteção.</p>
+
+            <p>O problema surgiu quando o software não apenas escondia sua própria presença, mas também tornava os computadores mais vulneráveis a outras ameaças e dificultava a remoção do rootkit. A situação gerou grande controvérsia e levou a processos judiciais contra a Sony BMG. Em resposta ao escândalo, a Sony BMG lançou uma atualização para remover o rootkit e ofereceu compensações aos clientes afetados. Esse caso destacou a necessidade de maior transparência e responsabilidade no uso de softwares de proteção e gerenciamento de direitos digitais.</p>
+        </aside>
+    </main>
+    <div style="max-width: 600px; background-color: white; margin: auto;margin-top: 20px;padding: 10px;border-radius:5px;box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
+        <p  style="font-weight: bold; margin: 5px;">Fontes:</p>
+        <a href="https://www.kaspersky.com.br/resource-center/definitions/what-is-rootkit" target="_blank" style="display: block;padding: 5px;">Kaspersky Rootkit</a>
+        <a href="https://nordvpn.com/pt-br/blog/rootkit-o-que-e/" target="_blank" style="display: block;padding: 5px;">Nordvpn Rootkits</a>
+        <a href="https://dciber.org/wp-content/uploads/2022/07/chip-based-rootkit-800x534-1.jpeg" target="_blank" style="display: block;padding: 5px;">Imagem 1</a>
+        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" style="display: block; padding: 5px;">Malware ícones criados por xnimrodx - Flaticon</a>
+    </div> 
+    <footer>
+        <p>
+            Página feita by bubu!
+        </p>
+    </footer>
+</body>
+</html>
