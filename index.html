@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página inicial</title>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-        *{
-            padding: 0;
-            margin: 0;
+        * {
+            padding: 0px;
+            margin: 0px;
         }
 
         body {
-            background-color: #80DDF2;
+            min-height: 100vh;
+            background-image: linear-gradient(to bottom, #1B2D5E, #1B67B3);
             font-family: 'Roboto', Helvetica, sans-serif;
         }
 
@@ -25,159 +25,327 @@
             background-color: #3ea0c4;
             color: white;
         }
-        nav {
-            background-color: #1B67B3;
+
+        form input[type=submit],
+        form input[type=reset] {
+            display: block;
+            font-size: 1em;
+            width: 100%;
+            height: 40px;
+            background-color:#80DDF2;
+            border: none;
+            border-radius: 10px;
+            margin: 10px 0px;
+        }
+
+        form input[type=submit]:hover,
+        form input[type=reset]:hover {
+            background-color: #4f8996;
             color: white;
-            padding:20px;
-            box-shadow:1px 1px 15px rgba(0, 0, 0, 0.303); 
+        }
+        
+        div {
+           padding: 5px 0px; 
         }
 
-        nav > h1 {
-            font-family: 'Orbitron', Helvetica, sans-serif;
-            font-size: 40px;
-            text-align: center;
-            padding: 60px 0px;
+        .caixa{
+            margin: 10px 0px;
+            border-radius: 5px;
+            height: 30px;
         }
 
-        #link_menu {
-            color: white;
-            text-decoration: none;
+        .caixa input[type=text],
+        .caixa input[type=password],
+        .caixa input[type=number],
+        .caixa input[type=email] {
+            height: 20px;
+            width: 300px;
+            border-radius: 5px;
+            border-width: 1px;
+            background-color: #90CFFC;
+            font-size: 16px;
+            padding: 5px;
         }
 
-        #link_menu:hover {
-            background-color: #1B2D5E;
-            padding: 0px;
-            color: rgb(255, 255, 255);
-            text-decoration: underline;
+        .caixa input:focus{
+            background-color: white;
+        }
+        fieldset.as input{
+            background-color: #3ea0c4;
+        }
+
+        div span {
+            color: black;
+            width: 40px;
+        }
+
+        fieldset {
+            border: none;
+            margin: 25px 0px;
+        }
+
+        legend {
+            font-weight: 600;
+        }
+
+        input[type="radio"]{
+        position: relative;
+        margin-left: 5px;
+        cursor: pointer;
+        display: inline-block;
+        color: #333;
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        accent-color:rgb(118, 189, 243) ;
+        }
+
+        select {
+        width: 300px; 
+        padding: 5px; 
+        font-size: 1em; 
+        border: 1px solid ; 
+        border-radius: 5px;
+        background-color: white; 
+        }
+
+        select option:checked {
+        background-color: #90CFFC;
+        }
+
+        select option:hover {
+            background-color: #4e66a3;
+            color: #ffffff;
+        }
+
+        input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            accent-color: rgb(118, 189, 243) ;
+        }
+
+        input::placeholder{
+            color: rgb(54, 53, 53);
         }
 
         a {
-            color: rgb(9, 76, 182);
-            text-decoration: none;
-            border-radius: 5px;
+            color: #3ea0c4;
         }
 
-
-        a:hover {
-            text-decoration: underline;
-            background-color: #abbef36a;
-            padding: 5px;
-            color: rgb(3, 10, 67);
-        }
-
-        #menu {
+        a:hover{
+            color: #ffffff;
             background-color: #1B2D5E;
-            border-radius: 5px;
-            width: 75px;
-            height: 20px;
-            padding: 10px;
-            margin-left: auto;
-            display: inline-block;
-        }
-
-
-        main {
-            background-color: white;
-            max-width:800px;
-            margin: auto;
-            padding: 20px 40px;
-            border-radius: 0px 0px 5px 5px;
-            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);
-        }
-
-        h1, h2 {
-            font-family: 'Audiowide', Helvetica, sans-serif;
-            font-weight: 100;
-            padding: 10px 0px;
-        }
-
-        p {
-            line-height: 1.8em;
-            text-align: justify;
-        }
-
-        .imagem-responsiva {
-            max-width: 100%;
-            height: auto;
-        }
-
-        ul {
-            list-style-position: inside;
-        }
-
-        li {
-            margin: 5px;
-        }
-
-        footer {
-            background-color: #28847E;
-            color: white;
-            margin-top: 20px;
-        }
-        
-        footer p {
-            padding: 5px;
-            text-align: center;
+            border-radius: 10px;
+            padding: 5px 10px;
+            text-decoration: none;
         }
     </style>
-    <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Vírus e antivírus</h1>
-            <span id="menu"><a href="conclusao.html" id="link_menu">Conclusão</a></span>
-            <span id="menu"><a href="perfil.html" id="link_menu">Perfil </a></span>
-        </nav>
-    </header>
-        <main>
-            <div>
-                <h1>O que é vírus de computador?</h1>
-                <p>Um vírus de computador é um tipo de malware que se liga a outros programas, se autorreplica e se espalha de um computador para outro. Quando um vírus infecta um computador, ele faz cópias de si mesmo e anexa a outros arquivos ou documentos. Ele depois modifica esses arquivos e continua a se espalhar.</p>
-                <p>Os vírus infectam os computadores discretamente e, muitas vezes, são projetados para destruir arquivos pessoais ou obter o controle de dispositivos. Ao fazer cópias de si mesmos, os vírus de computador se espalham por dispositivos e redes, como vírus biológicos, que passam de pessoa em pessoa. Assim como as versões biológicas, alguns vírus de computador são simplesmente irritantes, enquanto outros podem causar grandes danos.</p>
-                <p>Diferentemente do que muitas pessoas podem pensar, quem utiliza os seus conhecimentos de informática para coletar informações, descobrir senhas de acesso a redes e quebrar códigos de segurança em benefício próprio, não são os hackers. Os responsáveis por tais práticas criminosas, na verdade, são os <a href="imagens_videos/cracker.mp4" style="color: black, Helvetica, sans-serif;font-weight: bold;">crackers</a>.</p>
-
-                   <p> Embora esse segundo nome não seja tão difundido quanto o primeiro, ele é o correto para se utilizar ao designar alguém que contraria a lei e age sempre em benefício próprio ao cometer delitos virtuais. Os crackers costumam quebrar códigos de seguranças de programas, o que faz com que eles se tornem “crackeados”. Já o termo "crack" é usado para se referir a alguma ferramenta (como aplicativos, links e programas) utilizada por crackers para obter acesso a chaves de registro e licenças de produtos pagos.</p>
-                <div style="text-align: center">
-                <img src="imagens_videos/virus.jpg" alt="" style="width: 400px;" class="imagem-responsiva">
+    <section style="background-color: white; border-radius: 10px; margin:auto;max-width: 700px;margin-top: 80px;margin-bottom: 80px;padding: 0px 10px 10px 10px;">
+        <div style="padding: 10px;">
+            <h1 style="text-align: center;font-family: 'Orbitron', Helvetica, sans-serif;margin: 10px;">Cadastro</h1>
+            <p style="line-height:1.8em;padding: 10px 0px;">Crie sua conta para ter acesso aos conteúdos do nosso site, além de sempre ser notificado em seu e-mail sobre as novidades!</p>
+            <form method="post">
+                <div class="caixa">
+                    <label for="inome" style="font-weight: 600;">Digite o seu nome:</label>
+                    <input type="text" name="nome" id="inome" required>
                 </div>
-                <h3>Diferença entre vírus e malware</h3>
-                <p style="padding-bottom: 15px;">Vírus é muitas vezes um termo genérico usado para se referir a qualquer tipo de software criado para ser prejudicial. Mas um vírus é apenas um tipo de malware, e é definido como um programa de computador que pode se autorreplicar, infectar outros programas e se espalhar para outros computadores.</p>
-                <h2>Clique nos 5 tipos de vírus abaixo para conhecê-los:</h2>
-                <ul style="list-style-type: '🦠';">
-                    <li><a href="pwvirus/trojans.html">Trojan</a></li>
-                    <li><a href="pwvirus/spyware.html">Spyware</a></li>
-                    <li><a href="pwvirus/adware.html">Adware</a></li>
-                    <li><a href="pwvirus/rootkits.html">Rootikits</a></li>
-                    <li><a href="pwvirus/ransomware.html">Ransomware</a></li>
-                </ul>
-                <h1>O que é antivírus de computador?</h1>
-                <div style="text-align: center;margin: 20px;"><img src="imagens_videos/antivirus.webp" alt="" style="width: 400px;border-radius: 10px;" class="imagem-responsiva "></div>
-                <p>O antivírus é um software que identifica e protege os dispositivos de malwares, também conhecidos como vírus. Esse programa pode ser instalado em computadores e dispositivos móveis, como celulares e tablets.</p>
-                <p>A função mais simples de um antivírus é monitorar arquivos e outros programas de um dispositivo para detectar vírus. Quando novas aplicações são instaladas, o programa faz a verificação delas para saber se existe alguma ação suspeita. Se algo foi identificado, a instalação é bloqueada ou a nova aplicação é encaminhada para a quarentena.</p>
-                <p>A quarentena é um espaço de proteção criptografado e gerenciado pelo antivírus, para que o possível vírus não se espalhe pelo sistema operacional do dispositivo. Arquivos e programas são encaminhados para a quarentena quando o antivírus ainda não identificou exatamente o tipo de vírus ou problema apresentado.</p>
-                <p>Alguns antivírus podem ser específicos para um determinado tipo de vírus, como os antispywares, que são focados em combater spywares e adwares — dois tipos que contaminam navegadores para roubar dados bancários e apresentar banners indesejados.</p>
-                <p style="padding-bottom: 15px;">De modo geral, os programas devem se adaptar às necessidades de diferentes usuários. Por isso, uma versão para computador doméstico não funciona corretamente em um servidor de empresa. Nesse caso, é preciso ir atrás de uma versão corporativa do antivírus escolhido.</p>
-                <h2>Clique nos 5 tipos de antivírus mais conhecidos abaixo para conhecê-los:</h2>
-                <ul style="list-style-type: '🛡️';">
-                    <li><a href="pagina_antivirus01.html">Norton antivírus</a></li>
-                    <li><a href="pagina_antivirus01.html#kaspersky">Kaspersky</a></li>
-                    <li><a href="pagina_antivirus01.html#bitdefender">Bitdefender</a></li>
-                    <li><a href="pagina_antivirus01.html#mcafee">McAfee</a></li>
-                    <li><a href="pagina_antivirus01.html#avast">Avast</a></li>
-                </ul>
-            </div>
-        </main>
-        <div style="max-width: 600px; background-color: white; margin: auto;margin-top: 20px;padding: 10px;border-radius:5px;box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
-            <p  style="font-weight: bold; margin: 5px;">Fontes:</p>
-            <a href="https://www.avast.com/pt-br/c-computer-virus" target="_blank" style="display: block;padding: 5px;">O que é vírus de computador</a>
-            <a href="https://static.vecteezy.com/ti/vetor-gratis/p3/16896309-infeccao-por-virus-de-laptop-hacking-de-computador-ilustracao-em-plana-vetor.jpg" target="_blank" style="display: block;padding: 5px;">Imagem 1</a>
-            <a href="https://www.eset.com/br/artigos/o-que-e-um-antivirus/" target="_blank" style="display: block;padding: 5px;">O que é um antivírus</a>
-            <a href="https://www.presse-citron.net/app/uploads/2021/07/antivirus-gratuit-pc.jpg" target="_blank" style="display: block;padding: 5px;">Imagem 2</a>
-            <a href="https://www.pexels.com/pt-br/video/html-vitoria-victory-anonimo-5377684/" target="_blank" style="display: block;padding: 5px;">Vídeo 1</a>
-        </div> 
-        <footer>
-            <p>Página criada por Camila Soares</p>
-        </footer>
+                <div class="caixa">
+                    <label for="idade" style="font-weight: 600;">Idade:</label>
+                    <input type="number" name="idade" id="idadei" required maxlength="2">
+                </div>
+                <div class="caixa">
+                    <label for="email" style="font-weight: 600;">E-mail:</label>
+                    <input type="email" name="mail" id="email" required maxlength="30">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                </div>
+                <fieldset>
+                    <legend>Gênero:</legend>
+                    <div>
+                        <input type="radio" name="sexo" id="imasc" checked>
+                        <label for="imasc">Masculino</label>
+                        <span class="material-symbols-outlined">
+                            Male
+                        </span>
+                    </div>
+                    <div>
+                        <input type="radio" name="sexo" id="ifem">
+                        <label for="ifem">Feminino</label>
+                        <span class="material-symbols-outlined">
+                            Female
+                        </span>
+                    </div>
+                    <div class="caixa">
+                        <input type="radio" name="sexo" id="ioutrog">
+                        <label for="ioutrog">Outro:</label>
+                        <input type="text" name="outro_genero" >
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="estados" style="font-weight: 600;">Selecione em que estado do Brasil você nasceu:</label>
+                    <select id="estados" name="estados">
+                        <optgroup label="Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="TO">Tocantins</option>
+                        </optgroup>
+                        <optgroup label="Nordeste">
+                            <option value="AL">Alagoas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+                        <optgroup label="Centro-Oeste">
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                        </optgroup>
+                        <optgroup label="Sudeste">
+                            <option value="ES">Espírito Santo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP" selected>São Paulo</option>
+                        </optgroup>
+                        <optgroup label="Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Já enfrentou algum tipo de vírus?<span class="material-symbols-outlined" style="margin-left: 5px;">
+                        Warning
+                     </span></legend>
+                    
+                    <div>
+                        <input type="radio" name="virus" id="isimv">
+                        <label for="isimv">Sim</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="virus" id="inaov">
+                        <label for="inaov">Não</label>
+                    </div>
+                    <div>
+                        <div>
+                            <p style="padding:  15px 0px 10px 0px;">Se sim, qual(is) tipo(s)?</p>
+                            <div>
+                                <input type="checkbox" name="virus" id="trojan" value="Norton">
+                                <label for="trojan">Cavalo de Troia (Trojan)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="virus" id="spyware" value="Kaspersky">
+                                <label for="spyware">Spyware</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="virus" id="Adware" value="Bitdefender">
+                                <label for="Adware">Adware</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="virus" id="Rasomware" value="McAfee">
+                                <label for="Rasomware">Rasomware</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="virus" id="Bot" value="Avast">
+                                <label for="Bot">Bot</label>
+                            </div>
+                            <div class="caixa">
+                                <input type="checkbox" name="virus" id="voutro" value="Outro">
+                                <label for="voutro">Outro:</label>
+                                <input type="text" name="outro_antivirus" id="outro_antivirus" class="outro" placeholder="Digite aqui outro(s) tipo(s) de vírus">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Utiliza algum antivírus? <span class="material-symbols-outlined" style="margin-left: 5px;">
+                        Shield
+                    </span></legend>
+                    <div>
+                        <input type="radio" name="antivirus" id="isima">
+                        <label for="isima">Sim</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="antivirus" id="inaoa">
+                        <label for="inaoa">Não</label>
+                    </div>
+                    <div>
+                        <p style="padding: 15px 0px 10px 0px;">Se sim, qual(is)?</p>
+                        <div>
+                            <input type="checkbox" name="antivirus" id="inorton" value="Norton">
+                            <label for="inorton">Norton</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="antivirus" id="ikarsp" value="Kaspersky">
+                            <label for="ikarsp">Kaspersky</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="antivirus" id="ibit" value="Bitdefender">
+                            <label for="ibit">Bitdefender</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="antivirus" id="imcafee" value="McAfee">
+                            <label for="imcafee">McAfee</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="antivirus" id="iavast" value="Avast">
+                            <label for="iavast">Avast</label>
+                        </div>
+                        <div class="caixa">
+                            <input type="checkbox" name="antivirus" id="ioutro" value="Outro">
+                            <label for="ioutro">Outro:</label>
+                            <input type="text" name="outro_antivirus" id="outro_antivirus" class="outro" placeholder="Digite aqui outro(s) antivírus que usa">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="caixa">
+                    <label for="username" style="font-weight: 600;">Digite um nome de usuário:</label>
+                    <input type="text" name="username" id="username" required minlength="5" maxlength="30">
+                    <span class="material-symbols-outlined">
+                        Person
+                    </span>
+                </div>
+                <div class="caixa">
+                    <label for="senha" style="font-weight: 600;">Digite uma senha:</label>
+                    <input type="password" name="senha" id="senha" required minlength="6" maxlength="8">
+                    <span class="material-symbols-outlined">
+                        Lock
+                    </span>
+                </div>
+                <div class="caixa">
+                    <label for="conf_senha" style="font-weight: 600;">Confirme a senha:</label>
+                    <input type="password" name="conf_senha" id="conf_senha" required minlength="6" maxlength="8">
+                    <span class="material-symbols-outlined">
+                        Lock
+                    </span>
+                </div>
+                <div>
+                    
+                    <label for="imagem" style="font-weight: 600;">Adicione uma foto de perfil se desejar:</label>
+                    <span class="material-symbols-outlined">
+                        Face
+                    </span>
+                    <input type="file" id="imagem" style="display: block;margin-top: 20px;">
+                </div>
+                <div>
+                    <input type="submit" value="Entrar" style="cursor: pointer">
+                    <input type="reset" value="Resetar" style="cursor: pointer">
+        </div>
+        <p style="text-align: center;">Já possui conta? <a href="login.html">entre por aqui</a></p>
+    </section>
 </body>
 </html>
