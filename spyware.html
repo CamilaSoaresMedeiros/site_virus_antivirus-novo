@@ -8,23 +8,21 @@
     <title>Spyware</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
         :root {
-            --txp:'Roboto', Helvetica, sans-serif;
-            --tnav:'Orbitron', Helvetica, sans-serif;
-            --tp:'Audiowide', Helvetica, sans-serif;
-            --cor1:#80DDF2;
-            --cor2:#1B67B3;
-            --cor3:#1B2D5E;
+            --txp: 'Roboto', Helvetica, sans-serif;
+            --tnav: 'Orbitron', Helvetica, sans-serif;
+            --tp: 'Audiowide', Helvetica, sans-serif;
+            --cor1: #80DDF2;
+            --cor2: #1B67B3;
+            --cor3: #1B2D5E;
         }
 
-        *{
-            padding: 0px;
-            margin: 0px;
+        * {
+            padding: 0;
+            margin: 0;
         }
 
         body {
@@ -45,20 +43,20 @@
         }
 
         nav > h1 {
-            font-family: 'Orbitron', Helvetica, sans-serif;
+            font-family: var(--tnav);
             font-size: 40px;
             text-align: center;
-            padding: 60px 0px;
+            padding: 60px 0;
         }
 
-        #link_menu {
+        .link-menu {
             text-decoration: none;
             color: white;
         }
 
-        #link_menu:hover {
+        .link-menu:hover {
             background-color: #1B2D5E;
-            padding: 0px;
+            padding: 0;
             color: rgb(255, 255, 255);
             text-decoration: underline;
         }
@@ -76,14 +74,15 @@
             color: rgb(3, 10, 67);
         }
 
-        #menu {
+        .menu-item {
             background-color: var(--cor3);
             border-radius: 5px;
             width: 75px;
             height: 20px;
             padding: 10px;
             margin-left: auto;
-            display: inline-block
+            display: inline-block;
+            text-align: center;
         }
         
         h1, h2 {
@@ -110,7 +109,7 @@
         main p {
             text-align: justify;
             line-height: 1.8em;
-            margin: 15px 0px;
+            margin: 15px 0;
         }
 
         aside {
@@ -141,53 +140,40 @@
     <header>
         <nav>
             <h1>Spyware</h1>
-            <span id="menu"><a href="apresentacao.html" id="link_menu">◀  Voltar</a></span>
-            <span id="menu" style="width: 40px;"><a href="perfil.html" id="link_menu" >Perfil</a></span>
-            <span id="menu"><a href="conclusao.html" id="link_menu">Conclusão</a></span>
+            <span class="menu-item"><a href="apresentacao.html" class="link-menu">◀ Voltar</a></span>
+            <span class="menu-item" style="width: 40px;"><a href="perfil.html" class="link-menu">Perfil</a></span>
+            <span class="menu-item"><a href="conclusao.html" class="link-menu">Conclusão</a></span>
         </nav>
     </header>
     <main>
         <article>
             <h1>O que é um spyware?</h1>
-                <p>Spyware, como indica o termo em inglês, é um software espião que costuma ser instalado no celular ou no computador sem o consentimento do usuário. Uma vez no computador, o programa monitora as atividades online, o histórico e os dados pessoais, para repassar as informações para terceiros. Esse tipo de malware é um dos mais perigosos, pois ele busca informações confidenciais que podem ser usadas para diversos fins, inclusive para roubo de senhas pessoais, informações bancárias ou de cartões de crédito.</p>
+            <p>Spyware, como indica o termo em inglês, é um software espião que costuma ser instalado no celular ou no computador sem o consentimento do usuário. Uma vez no computador, o programa monitora as atividades online, o histórico e os dados pessoais, para repassar as informações para terceiros. Esse tipo de malware é um dos mais perigosos, pois ele busca informações confidenciais que podem ser usadas para diversos fins, inclusive para roubo de senhas pessoais, informações bancárias ou de cartões de crédito.</p>
 
-                <p>Spyware é um dos malwares mais difíceis de detectar, pois ele age de maneira silenciosa nos dispositivos, ao contrário do adware. Ele executa as operações em segundo plano, de modo que é capaz de espionar por um longo período sem que a vítima descubra. O spyware costuma vir oculto junto com o download de programas ou de arquivos online gratuitos, mas vale ressaltar que ele podem ser usados tanto para para fins legítimos quanto para golpes.</p>
+            <p>Spyware é um dos malwares mais difíceis de detectar, pois ele age de maneira silenciosa nos dispositivos, ao contrário do adware. Ele executa as operações em segundo plano, de modo que é capaz de espionar por um longo período sem que a vítima descubra. O spyware costuma vir oculto junto com o download de programas ou de arquivos online gratuitos, mas vale ressaltar que ele pode ser usado tanto para fins legítimos quanto para golpes.</p>
 
-                <p>O spyware recolhe dados e transmite para administradores de acordo com o desejo dos desenvolvedores do malware. Por exemplo, dados pessoais e bancários costumam ser o alvo de organizações criminosas. Para empresas publicitárias, spywares podem fornecer informações sobre o comportamento do possível consumidor, hábitos online e o direcionamento de anúncios. Governos também podem adotar essa estratégia, em um esquema conhecido como "policeware" ou "govware".</p>
+            <p>O spyware recolhe dados e transmite para administradores de acordo com o desejo dos desenvolvedores do malware. Por exemplo, dados pessoais e bancários costumam ser o alvo de organizações criminosas. Para empresas publicitárias, spywares podem fornecer informações sobre o comportamento do possível consumidor, hábitos online e o direcionamento de anúncios. Governos também podem adotar essa estratégia, em um esquema conhecido como "policeware" ou "govware".</p>
 
-                <p>Dispositivos móveis não estão a salvo de spywares. Celulares e tablets, quando infectados, podem vazar informações como histórico de chamadas, histórico de navegador e até mesmo fotos. Em casos mais graves, o malware pode rastrear a localização do dispositivo via GPS, comandar as operações do aparelho e direcionar ataques à empresa que o usuário trabalha por meio de brechas no sistema operacional do dispositivo.</p>
+            <p>Dispositivos móveis não estão a salvo de spywares. Celulares e tablets, quando infectados, podem vazar informações como histórico de chamadas, histórico de navegador e até mesmo fotos. Em casos mais graves, o malware pode rastrear a localização do dispositivo via GPS, comandar as operações do aparelho e direcionar ataques à empresa que o usuário trabalha por meio de brechas no sistema operacional do dispositivo.</p>
             
             <div style="text-align: center;">
                 <img class="img_resp" src="imagens/spyware.webp" alt="spyware" style="width: 650px;">
             </div>
             <h2>Como o spyware age?</h2>
-                <p><strong>Registro de toques na tela e na rede:</strong> também conhecido como "keyloggers", esse malware é capaz de capturar as atividades do computador, incluindo histórico do teclado, histórico de pesquisa, credenciais em sites de bate-papo etc.</p>
+            <p><strong>Registro de toques na tela e na rede:</strong> também conhecido como "keyloggers", esse malware é capaz de capturar as atividades do computador, incluindo histórico do teclado, histórico de pesquisa, credenciais em sites de bate-papo etc.</p>
 
-                <p><strong>Trojans bancários:</strong> um dos principais fins dos spywares é o roubo de dados pessoais, informações bancárias e de cartões de crédito, para a realização de transações financeiras.</p>
+            <p><strong>Trojans bancários:</strong> um dos principais fins dos spywares é o roubo de dados pessoais, informações bancárias e de cartões de crédito, para a realização de transações financeiras.</p>
 
-                <p><strong>Controle remoto do dispositivo:</strong> esses softwares agem na configuração do software e permitem o controle do dispositivo à distância, por terceiros.</p>
+            <p><strong>Controle remoto do dispositivo:</strong> esses softwares agem na configuração do software e permitem o controle do dispositivo à distância, por terceiros.</p>
 
-                <p><strong>Redução de velocidade do dispositivo:</strong> spyware pode reduzir a velocidade e eficiência do sistema operacional, causando lentidão e travas no sistema.</p>
-                <p>
-                    O spyware recolhe dados e transmite para administradores de acordo com o desejo dos desenvolvedores do malware. Por exemplo, dados pessoais e bancários costumam ser o alvo de organizações criminosas. Para empresas publicitárias, spywares podem fornecer informações sobre o comportamento do possível consumidor, hábitos online e o direcionamento de anúncios. Governos também podem adotar essa estratégia, em um esquema conhecido como "policeware" ou "govware".
-                </p>
-                <p>
-                    Dispositivos móveis não estão a salvo de spywares. Celulares e tablets, quando infectados, podem vazar informações como histórico de chamadas, histórico de navegador e até mesmo fotos. Em casos mais graves, o malware pode rastrear a localização do dispositivo via GPS, comandar as operações do aparelho e direcionar ataques à empresa que o usuário trabalha por meio de brechas no sistema operacional do dispositivo.
-                </p>
-            
+            <p><strong>Redução de velocidade do dispositivo:</strong> spyware pode reduzir a velocidade e eficiência do sistema operacional, causando lentidão e travas no sistema.</p>
+
             <h2>Tipos de spyware</h2>
-            <p>
-                <strong>Trojans:</strong> São malwares que se disfarçam de programas legítimos enquanto ocultam funcionalidades maliciosas. Muitas vezes, esse tipo de malware é usado para se infiltrar em um dispositivo e depois instalar ou baixar o spyware.
-            </p>
-            <p>
-                <strong>Adware:</strong> Projetado para coletar informações detalhadas sobre um usuário e seus hábitos e interesses. Adware é um spyware projetado para coletar informações para fins de marketing ou para veicular anúncios indesejados, enganosos ou maliciosos.
-            </p>
-            <p>
-                <strong>Cookies de rastreamento:</strong> Cookies são arquivos salvos em um computador por um site para armazenar informações de configuração. Um exemplo é um token de autenticação armazenado para permitir logins repetidos em um dispositivo confiável após clicar em “Lembrar-me”. Os cookies de rastreamento são projetados para serem acessados ​​por muitos sites, permitindo que eles rastreiem um usuário pela Internet.
-            </p>
-            <p>
-                <strong>Monitores de sistema:</strong> São malwares que monitoram as atividades de um usuário em um computador e as enviam ao invasor. Um keylogger é um tipo específico de monitor de sistema que registra as teclas digitadas, mas os monitores do sistema também podem rastrear sites visitados, acesso a arquivos, e-mails e etc.
-            </p>
+            <p><strong>Trojans:</strong> São malwares que se disfarçam de programas legítimos enquanto ocultam funcionalidades maliciosas. Muitas vezes, esse tipo de malware é usado para se infiltrar em um dispositivo e depois instalar ou baixar o spyware.</p>
+            <p><strong>Adware:</strong> Projetado para coletar informações detalhadas sobre um usuário e seus hábitos e interesses. Adware é um spyware projetado para coletar informações para fins de marketing ou para veicular anúncios indesejados, enganosos ou maliciosos.</p>
+            <p><strong>Cookies de rastreamento:</strong> Cookies são arquivos salvos em um computador por um site para armazenar informações de configuração. Um exemplo é um token de autenticação armazenado para permitir logins repetidos em um dispositivo confiável após clicar em “Lembrar-me”. Os cookies de rastreamento são projetados para serem acessados por muitos sites, permitindo que eles rastreiem um usuário pela Internet.</p>
+            <p><strong>Monitores de sistema:</strong> São malwares que monitoram as atividades de um usuário em um computador e as enviam ao invasor. Um keylogger é um tipo específico de monitor de sistema que registra as teclas digitadas, mas os monitores do sistema também podem rastrear sites visitados, acesso a arquivos, e-mails etc.</p>
+
             <h2>Sinais de infecção de um spyware</h2>
             <p><strong>Desempenho Lento:</strong> Se o seu computador ou dispositivo está mais lento do que o normal, pode ser um sinal de spyware, que pode estar consumindo recursos do sistema.</p>
 
@@ -202,15 +188,15 @@
         <aside>
             <h1 style="text-align: center;">Caso real</h1>
             <h3>SpyAgent, Spyware, 2005.</h3>
-            <p>Um exemplo notável de ataque de spyware é o <strong>"SpyAgent"</strong>. Em 2005, um spyware chamado SpyAgent foi identificado como uma ameaça significativa. O SpyAgent era um programa que, uma vez instalado, coletava informações pessoais dos usuários sem o seu consentimento, como teclas digitadas, histórico de navegação, e capturas de tela. </p>
+            <p>Um exemplo notável de ataque de spyware é o <strong>"SpyAgent"</strong>. Em 2005, um spyware chamado SpyAgent foi identificado como uma ameaça significativa. O SpyAgent era um programa que, uma vez instalado, coletava informações pessoais dos usuários sem o seu consentimento, como teclas digitadas, histórico de navegação e capturas de tela.</p>
             <p>Ele foi distribuído através de vários métodos, incluindo downloads disfarçados e anexos de e-mail, e permitia que os atacantes monitorassem as atividades dos usuários e acessassem dados sensíveis. O SpyAgent demonstrou como os spywares podem ser usados para espionagem e roubo de dados pessoais, afetando a privacidade e segurança das vítimas. A remoção e prevenção desse tipo de spyware geralmente exigem ferramentas de segurança especializadas e práticas de navegação seguras.</p>
         </aside>
     </main>
-    <div style="max-width: 600px; background-color: white; margin: auto;margin-top: 20px;padding: 10px;border-radius:5px;box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
-        <p  style="font-weight: bold; margin: 5px;">Fontes:</p>
-        <a href="https://www.techtudo.com.br/noticias/2019/07/o-que-e-spyware-entenda-como-age-o-app-espiao-e-veja-como-se-proteger.ghtml" target="_blank" style="display: block;padding: 5px;">TechTudo Spyware</a>
-        <a href="https://www.kaspersky.com.br/resource-center/threats/spyware" target="_blank" style="display: block;padding: 5px;">Kaspersky Spyware</a>
-        <a href="https://s2-techtudo.glbimg.com/V0vXm-AL0h0NPKxSePAYIYZPRLM=/0x0:695x484/1000x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2014/08/13/pen-drive-3.jpg" target="_blank" style="display: block;padding: 5px;">Imagem 1</a>
+    <div style="max-width: 600px; background-color: white; margin: auto; margin-top: 20px; padding: 10px; border-radius: 5px; box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
+        <p style="font-weight: bold; margin: 5px;">Fontes:</p>
+        <a href="https://www.techtudo.com.br/noticias/2019/07/o-que-e-spyware-entenda-como-age-o-app-espiao-e-veja-como-se-proteger.ghtml" target="_blank" style="display: block; padding: 5px;">TechTudo Spyware</a>
+        <a href="https://www.kaspersky.com.br/resource-center/threats/spyware" target="_blank" style="display: block; padding: 5px;">Kaspersky Spyware</a>
+        <a href="https://s2-techtudo.glbimg.com/V0vXm-AL0h0NPKxSePAYIYZPRLM=/0x0:695x484/1000x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2014/08/13/pen-drive-3.jpg" target="_blank" style="display: block; padding: 5px;">Imagem 1</a>
         <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" style="display: block; padding: 5px;">Malware ícones criados por xnimrodx - Flaticon</a>
     </div> 
     <footer>

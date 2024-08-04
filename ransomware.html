@@ -8,23 +8,21 @@
     <title>Ransomware</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
         :root {
-            --txp:'Roboto', Helvetica, sans-serif;
-            --tnav:'Orbitron', Helvetica, sans-serif;
-            --tp:'Audiowide', Helvetica, sans-serif;
-            --cor1:#80DDF2;
-            --cor2:#1B67B3;
-            --cor3:#1B2D5E;
+            --txp: 'Roboto', Helvetica, sans-serif;
+            --tnav: 'Orbitron', Helvetica, sans-serif;
+            --tp: 'Audiowide', Helvetica, sans-serif;
+            --cor1: #80DDF2;
+            --cor2: #1B67B3;
+            --cor3: #1B2D5E;
         }
 
-        *{
-            padding: 0px;
-            margin: 0px;
+        * {
+            padding: 0;
+            margin: 0;
         }
 
         body {
@@ -45,21 +43,20 @@
         }
 
         nav > h1 {
-            font-family: 'Orbitron', Helvetica, sans-serif;
+            font-family: var(--tnav);
             font-size: 40px;
             text-align: center;
-            padding: 60px 0px;
+            padding: 60px 0;
         }
 
-        #link_menu {
+        .menu-link {
             text-decoration: none;
             color: white;
         }
 
-        #link_menu:hover {
-            background-color: #1B2D5E;
-            padding: 0px;
-            color: rgb(255, 255, 255);
+        .menu-link:hover {
+            background-color: var(--cor3);
+            color: white;
             text-decoration: underline;
         }
 
@@ -76,14 +73,14 @@
             color: rgb(3, 10, 67);
         }
 
-        #menu {
+        .menu-item {
             background-color: var(--cor3);
             border-radius: 5px;
             width: 75px;
             height: 20px;
             padding: 10px;
             margin-left: auto;
-            display: inline-block
+            display: inline-block;
         }
         
         h1, h2 {
@@ -93,16 +90,16 @@
         }
 
         main {
-        min-width: 300px;
-        max-width: 800px;
-        background-color: white;
-        margin: auto;
-        padding: 20px 40px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.351);
-        border-radius: 0px 0px 5px 5px;
+            min-width: 300px;
+            max-width: 800px;
+            background-color: white;
+            margin: auto;
+            padding: 20px 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.351);
+            border-radius: 0 0 5px 5px;
         }
 
-        .img_resp{
+        .img_resp {
             max-width: 100%;
             height: auto;
         }
@@ -110,7 +107,7 @@
         main p {
             text-align: justify;
             line-height: 1.8em;
-            margin: 15px 0px;
+            margin: 15px 0;
         }
 
         aside {
@@ -125,7 +122,7 @@
         }
 
         footer {
-            background-color: #1B67B3;
+            background-color: var(--cor2);
             color: white;
             margin-top: 20px;
         }
@@ -141,65 +138,59 @@
     <header>
         <nav>
             <h1>Ransomware</h1>
-            <span id="menu"><a href="apresentacao.html" id="link_menu">◀  Voltar</a></span>
-            <span id="menu" style="width: 40px;"><a href="perfil.html" id="link_menu">Perfil</a></span>
-            <span id="menu"><a href="conclusao.html" id="link_menu">Conclusão</a></span>
+            <span class="menu-item"><a href="apresentacao.html" class="menu-link">◀ Voltar</a></span>
+            <span class="menu-item" style="width: 40px;"><a href="perfil.html" class="menu-link">Perfil</a></span>
+            <span class="menu-item"><a href="conclusao.html" class="menu-link">Conclusão</a></span>
         </nav>
     </header>
     <main>
         <article>
             <h1>O que é um Ransomware?</h1>
-                <p>O ransomware é um tipo de malware que sequestra o computador da vítima e cobra um valor em dinheiro pelo resgate, geralmente usando a moeda virtual bitcoin, que torna quase impossível rastrear o criminoso que pode vir a receber o valor. Este tipo de "vírus sequestrador" age codificando os dados do sistema operacional de forma com que o usuário não tenha mais acesso. Uma vez que algum arquivo do Windows esteja infectado, o malware codificará os dados do usuário, em segundo plano, sem que ninguém perceba.</p>
+            <p>O ransomware é um tipo de malware que sequestra o computador da vítima e cobra um valor em dinheiro pelo resgate, geralmente usando a moeda virtual bitcoin. Este tipo de "vírus sequestrador" age codificando os dados do sistema operacional, impedindo o usuário de acessar suas informações. O malware criptografa os dados do usuário em segundo plano, sem que a vítima perceba, e exibe um pop-up exigindo pagamento para liberar o acesso aos arquivos.</p>
 
-                <p>Quando tudo estiver pronto, ele emite um pop-up avisando que o PC está bloqueado e que a pessoa não pode mais usá-lo, a menos que pague o valor exigido de resgate para obter a chave que dá acesso novamente aos seus dados.</p>
-           
             <div style="text-align: center;">
-                <img calss="img_resp" src="imagens/ransomware.jpg" alt="ransomware" style="width: 650px;">
+                <img class="img_resp" src="imagens/ransomware.jpg" alt="ransomware" style="width: 650px;">
             </div>
+            
             <h2>Como o ransomware age?</h2>
-                <p>Ransomware é um tipo de malware (software malicioso) que criptografa os arquivos de um computador ou sistema, tornando-os inacessíveis ao usuário. A tradução do termo "ransomware" vem da combinação das palavras "ransom" (resgate) e "software".</p>
+            <p>Ransomware é um tipo de malware que criptografa os arquivos de um computador ou sistema, tornando-os inacessíveis ao usuário. A tradução do termo "ransomware" vem da combinação das palavras "ransom" (resgate) e "software".</p>
 
-                <p>A ação do ransomware geralmente ocorre da seguinte maneira: uma vez que o malware infecta o sistema, ele criptografa os arquivos importantes e exibe uma mensagem informando ao usuário que seus arquivos foram bloqueados. Para desbloquear os arquivos, o usuário é solicitado a pagar um resgate (geralmente em criptomoedas) aos cibercriminosos responsáveis pelo ataque.</p>
+            <p>Após infectar o sistema, o malware criptografa os arquivos importantes e exibe uma mensagem informando ao usuário que seus arquivos foram bloqueados. Para desbloqueá-los, o usuário deve pagar um resgate (geralmente em criptomoedas) aos cibercriminosos. Caso o pagamento não seja feito dentro de um prazo, os arquivos podem ser permanentemente perdidos ou divulgados.</p>
 
-                <p>O objetivo principal do ransomware é obter ganhos financeiros ilegais por meio da extorsão dos usuários. Os criminosos ameaçam que, se o resgate não for pago dentro de um determinado prazo, os arquivos serão permanentemente perdidos ou divulgados publicamente. Esse tipo de ataque pode ter consequências significativas – isso porque muitos indivíduos, empresas e organizações dependem de seus dados para operar normalmente.</p>
-
-                <p>Existem diferentes variantes de ransomware, e eles podem se espalhar por meio de diversos métodos, como anexos de e-mail maliciosos, downloads de arquivos infectados, exploração de vulnerabilidades de software e até mesmo por meio de anúncios ou links suspeitos na internet.</p>
+            <p>Existem diferentes variantes de ransomware que se espalham por anexos de e-mail maliciosos, downloads de arquivos infectados, exploração de vulnerabilidades de software e anúncios ou links suspeitos na internet.</p>
            
             <h2>Tipos de Ransomware</h2>
-            <p>Existem diversos tipos de ransomware, cada um com suas características específicas. No entanto, dois dos tipos mais comuns são o Crypto Ransomware e o Locker Ransomware.</p>
-            <p><strong>Crypto Ransomware:</strong> esta é uma categoria de ransomware que se concentra em criptografar os arquivos do usuário para torná-los inacessíveis. Ele usa algoritmos de criptografia avançados para transformar os arquivos originais em uma forma ilegível, exigindo uma chave de descriptografia para restaurá-los. Normalmente, o usuário é notificado sobre o ataque por meio de uma mensagem exibida na tela, contendo instruções sobre como pagar o resgate e obter a chave de descriptografia. Exemplos populares de Crypto ransomware incluem o WannaCry e o CryptoLocker.</p>
-            <p><strong>Locker Ransomware:</strong> este, por sua vez, não criptografa os arquivos do usuário, mas bloqueia o acesso ao sistema operacional ou a determinadas funcionalidades do computador. Ele impede que o usuário acesse o ambiente de trabalho, os aplicativos ou até mesmo a conexão com a Internet. O Locker ransomware costuma exibir uma mensagem na tela inicial do sistema, informando que o computador foi bloqueado e que um resgate deve ser pago para desbloqueá-lo. Exemplos conhecidos de Locker ransomware são o Reveton e o Police-themed ransomware.</p>
+            <p>Os principais tipos de ransomware incluem o Crypto Ransomware e o Locker Ransomware.</p>
+            <p><strong>Crypto Ransomware:</strong> Criptografa os arquivos do usuário, tornando-os ilegíveis e exigindo uma chave de descriptografia. Exemplos incluem WannaCry e CryptoLocker.</p>
+            <p><strong>Locker Ransomware:</strong> Bloqueia o acesso ao sistema operacional ou a funcionalidades do computador, impedindo o usuário de usar o ambiente de trabalho, aplicativos ou até mesmo a internet. Exemplos incluem Reveton e Police-themed ransomware.</p>
 
-            <h2>Sinais de infecção de um Ransomware</h2>
-            <p><strong>Arquivos Criptografados:</strong> Notar que arquivos importantes foram criptografados e agora têm extensões desconhecidas, como .encrypted, .locked, ou outras extensões específicas de ransomwares.</p>
+            <h2>Sinais de Infecção por Ransomware</h2>
+            <p><strong>Arquivos Criptografados:</strong> Arquivos importantes com extensões desconhecidas, como .encrypted, .locked, etc.</p>
 
-            <p><strong>Mensagens de Resgate</strong>: Mensagens de resgate que aparecem em arquivos, imagens de fundo de tela, ou pop-ups, informando que seus arquivos foram criptografados e pedindo pagamento para liberar o acesso.</p>
+            <p><strong>Mensagens de Resgate:</strong> Mensagens em arquivos, imagens de fundo de tela ou pop-ups solicitando pagamento para liberar o acesso aos arquivos.</p>
 
-            <p><strong>Lentidão e Congelamento:</strong> Desempenho lento do sistema, congelamento ou bloqueios frequentes podem indicar que um ransomware está tentando criptografar arquivos.</p>
+            <p><strong>Lentidão e Congelamento:</strong> Desempenho lento ou congelamento do sistema pode indicar criptografia em andamento.</p>
 
-            <p><strong>Alterações nos Arquivos:</strong> Arquivos que estão sendo alterados rapidamente ou que aparecem em locais inesperados podem ser sinais de que um ransomware está em ação.</p>
+            <p><strong>Alterações nos Arquivos:</strong> Arquivos sendo alterados rapidamente ou aparecendo em locais inesperados.</p>
 
-            <p><strong>Atividade de Disco:</strong> Atividade de disco incomum, como alta utilização do disco sem razão aparente, pode ser um sinal de que um ransomware está criptografando arquivos.</p>
+            <p><strong>Atividade de Disco:</strong> Alta utilização do disco sem razão aparente pode indicar criptografia de arquivos.</p>
         </article>
         <aside>
             <h1 style="text-align: center;">Caso Real</h1>
             <h3>WannaCry, ransomware, 2017</h3>
-            <p>O pior ataque de ransomware da história atende pelo nome de WannaCry, introduzido por meio de e-mails de phishing em 2017. Mais de 200 mil pessoas foram atingidas em todo o mundo, incluindo hospitais, universidades, FedEx, Telefonica, Nissan, Renault e outras grandes corporações. A ameaça explora uma vulnerabilidade no Windows. O prejuízo causado pelo WannaCry ultrapassa USD 4 bilhões.</p>
+            <p>O ataque WannaCry, ocorrido em 2017, foi o maior de ransomware na história, afetando mais de 200 mil pessoas em todo o mundo, incluindo grandes corporações como FedEx e Telefonica. O ataque explorou uma vulnerabilidade no Windows e causou prejuízos superiores a USD 4 bilhões.</p>
         </aside>
     </main>
-    <div style="max-width: 600px; background-color: white; margin: auto;margin-top: 20px;padding: 10px;border-radius:5px;box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
-        <p  style="font-weight: bold; margin: 5px;">Fontes:</p>
-        <a href="https://www.controle.net/faq/9-tipos-de-ransomware-mais-conhecidos-na-internet" target="_blank" style="display: block;padding: 5px;">9 Tipos de Ransomware</a>
-        <a href="https://www.kaspersky.com.br/resource-center/threats/ransomware" target="_blank" style="display: block;padding: 5px;">Kaspersky Ransomware</a>
-        <a href="https://www.techtudo.com.br/guia/2023/05/o-que-e-ransomware" target="_blank" style="display: block;padding: 5px;">TechTudo Ransomware</a>
-        <a href="https://www.kaspersky.com.br/content/pt-br/images/repository/isc/2021/ransomware.jpg" target="_blank" style="display: block;padding: 5px;">Imagem 1</a>
-        
+    <div style="max-width: 600px; background-color: white; margin: auto; margin-top: 20px; padding: 10px; border-radius: 5px; box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
+        <p style="font-weight: bold; margin: 5px;">Fontes:</p>
+        <a href="https://www.controle.net/faq/9-tipos-de-ransomware-mais-conhecidos-na-internet" target="_blank" style="display: block; padding: 5px;">9 Tipos de Ransomware</a>
+        <a href="https://www.kaspersky.com.br/resource-center/threats/ransomware" target="_blank" style="display: block; padding: 5px;">Kaspersky Ransomware</a>
+        <a href="https://www.techtudo.com.br/guia/2023/05/o-que-e-ransomware" target="_blank" style="display: block; padding: 5px;">TechTudo Ransomware</a>
+        <a href="https://www.kaspersky.com.br/content/pt-br/images/repository/isc/2021/ransomware.jpg" target="_blank" style="display: block; padding: 5px;">Imagem 1</a>
         <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" style="display: block; padding: 5px;">Malware ícones criados por xnimrodx - Flaticon</a>
     </div> 
     <footer>
-        <p>
-            Página feita by bubu!
-        </p>
+        <p>Página desenvolvida by bubu!</p>
     </footer>
 </body>
 </html>
