@@ -209,6 +209,20 @@
             <p><strong>Alterações nas Configurações do Sistema:</strong> Configurações do sistema alteradas sem a sua permissão, como mudanças nas permissões de arquivos ou configurações de segurança.</p>
             
             <p><strong>Conexões de Rede Suspeitas:</strong> Atividade de rede incomum ou desconhecida, como conexões de rede inesperadas ou tráfego que não pode ser identificado.</p>
+
+            <h1>Malware Linux</h1>
+
+            <p>O <strong>Ebury</strong> é um malware focado em sistemas Linux que foi descoberto pela primeira vez em 2014. Ele é um tipo de rootkit, o que significa que ele se instala no sistema e tenta esconder sua presença para evitar a detecção. O principal objetivo do Ebury é roubar credenciais de login, como nomes de usuário e senhas, de sistemas comprometidos.</p>
+
+            <p><strong>Objetivo e Funcionalidade:</strong> O Ebury é projetado para capturar informações sensíveis, especialmente credenciais SSH (Secure Shell), que são usadas para acessar remotamente servidores Linux. Uma vez que o malware está instalado, ele pode registrar e enviar essas credenciais para um servidor de comando e controle controlado pelos atacantes.</p>
+
+            <p><strong>Método de Infecção:</strong> O Ebury pode ser instalado de várias maneiras, incluindo a exploração de vulnerabilidades conhecidas em software ou sistemas, ataques de força bruta para obter acesso root, ou através de pacotes de software comprometidos que foram manipulados para incluir o malware.</p>
+
+            <p><strong>Modus Operandi:</strong> Após a infecção, o Ebury tenta se esconder modificando arquivos do sistema e manipulando os logs para não ser detectado. Ele pode alterar arquivos essenciais do sistema, como `ssh` e `sshd`, para capturar e transmitir credenciais de login.</p>
+
+            <p><strong>Impacto e Risco:</strong> A presença do Ebury em um sistema pode levar ao comprometimento total do servidor, com os invasores ganhando acesso contínuo e potencialmente controlando todo o sistema. Isso representa um risco significativo para a segurança e privacidade dos dados.</p>
+
+            <p><strong>Mitigação e Remoção:</strong> Para proteger sistemas contra o Ebury e malware similar, é essencial manter o software atualizado, usar práticas seguras de gerenciamento de senhas, e monitorar o sistema para atividades suspeitas. A remoção do Ebury pode ser complexa e pode exigir a reinstalação completa do sistema, além da verificação minuciosa para garantir que todas as modificações feitas pelo malware sejam revertidas.</p>
         </article>
         <aside>
             <h1 style="text-align: center;">Caso Real</h1>
