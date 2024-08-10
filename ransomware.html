@@ -43,48 +43,50 @@
         }
 
         nav > h1 {
-            font-family: var(--tnav);
+            font-family: 'Orbitron', Helvetica, sans-serif;
             font-size: 40px;
             text-align: center;
-            padding: 60px 0;
+            padding: 80px 0px;
         }
 
-        .menu-link {
-            text-decoration: none;
-            color: white;
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
         }
 
-        .menu-link:hover {
-            background-color: var(--cor3);
-            color: white;
+        .nav-list li {
+            margin: 0 15px;
+        }
+
+        .nav-list a {
             text-decoration: underline;
+            color: white;
+            font-family: 'Roboto', Helvetica, sans-serif;
+            padding: 8px 10px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        a {
+        .nav-list a:hover {
+            background-color: #1B2D5E;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .link {
             color: rgb(9, 76, 182);
             text-decoration: none;
             border-radius: 5px;
+            display: block;
+            padding: 5px;
         }
 
-        a:hover {
+        .link:hover {
             text-decoration: underline;
             background-color: #abbef36a;
             padding: 5px;
             color: rgb(3, 10, 67);
-        }
-
-        .menu-item {
-            background-color: var(--cor3);
-            border-radius: 5px;
-            width: 75px;
-            height: 20px;
-            padding: 10px;
-            margin-left: auto;
-            display: inline-block;
-        }
-
-        #pagina_principal {
-            width: 120px;
         }
         
         h1, h2 {
@@ -142,9 +144,11 @@
     <header>
         <nav>
             <h1>Ransomware</h1>
-            <span class="menu-item" id="pagina_principal"><a href="apresentacao.html" class="menu-link">Página principal</a></span>
-            <span class="menu-item" style="width: 40px;"><a href="perfil.html" class="menu-link">Perfil</a></span>
-            <span class="menu-item"><a href="conclusao.html" class="menu-link">Conclusão</a></span>
+            <ul class="nav-list">
+                <li><a href="apresentacao.html">Página Inicial</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="conclusao.html">Conclusão</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -155,13 +159,6 @@
             <div style="text-align: center;">
                 <img class="img_resp" src="imagens/ransomware.jpg" alt="ransomware" style="width: 650px;">
             </div>
-            
-            <h2>Como o ransomware age?</h2>
-            <p>Ransomware é um tipo de malware que criptografa os arquivos de um computador ou sistema, tornando-os inacessíveis ao usuário. A tradução do termo "ransomware" vem da combinação das palavras "ransom" (resgate) e "software".</p>
-
-            <p>Após infectar o sistema, o malware criptografa os arquivos importantes e exibe uma mensagem informando ao usuário que seus arquivos foram bloqueados. Para desbloqueá-los, o usuário deve pagar um resgate (geralmente em criptomoedas) aos cibercriminosos. Caso o pagamento não seja feito dentro de um prazo, os arquivos podem ser permanentemente perdidos ou divulgados.</p>
-
-            <p>Existem diferentes variantes de ransomware que se espalham por anexos de e-mail maliciosos, downloads de arquivos infectados, exploração de vulnerabilidades de software e anúncios ou links suspeitos na internet.</p>
            
             <h2>Tipos de Ransomware</h2>
             <p>Os principais tipos de ransomware incluem o Crypto Ransomware e o Locker Ransomware.</p>
@@ -187,11 +184,11 @@
     </main>
     <div style="max-width: 600px; background-color: white; margin: auto; margin-top: 20px; padding: 10px; border-radius: 5px; box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
         <p style="font-weight: bold; margin: 5px;">Fontes:</p>
-        <a href="https://www.controle.net/faq/9-tipos-de-ransomware-mais-conhecidos-na-internet" target="_blank" style="display: block; padding: 5px;">9 Tipos de Ransomware</a>
-        <a href="https://www.kaspersky.com.br/resource-center/threats/ransomware" target="_blank" style="display: block; padding: 5px;">Kaspersky Ransomware</a>
-        <a href="https://www.techtudo.com.br/guia/2023/05/o-que-e-ransomware" target="_blank" style="display: block; padding: 5px;">TechTudo Ransomware</a>
-        <a href="https://www.kaspersky.com.br/content/pt-br/images/repository/isc/2021/ransomware.jpg" target="_blank" style="display: block; padding: 5px;">Imagem 1</a>
-        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" style="display: block; padding: 5px;">Malware ícones criados por xnimrodx - Flaticon</a>
+        <a href="https://www.controle.net/faq/9-tipos-de-ransomware-mais-conhecidos-na-internet" target="_blank" class="link">9 Tipos de Ransomware</a>
+        <a href="https://www.kaspersky.com.br/resource-center/threats/ransomware" target="_blank" class="link">Kaspersky Ransomware</a>
+        <a href="https://www.techtudo.com.br/guia/2023/05/o-que-e-ransomware" target="_blank"  class="link">TechTudo Ransomware</a>
+        <a href="https://www.kaspersky.com.br/content/pt-br/images/repository/isc/2021/ransomware.jpg" target="_blank" class="link">Imagem 1</a>
+        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" class="link">Malware ícones criados por xnimrodx - Flaticon</a>
     </div> 
     <footer>
         <p>Página desenvolvida by bubu!</p>

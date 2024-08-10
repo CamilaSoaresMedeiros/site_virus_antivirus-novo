@@ -43,50 +43,50 @@
         }
 
         nav > h1 {
-            font-family: var(--tnav);
-            background-color: var(--cor2);
-            text-align: center;
-            padding: 60px 0;
+            font-family: 'Orbitron', Helvetica, sans-serif;
             font-size: 40px;
+            text-align: center;
+            padding: 80px 0px;
         }
 
-        .link_menu {
-            text-decoration: none;
-            color: white;
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
         }
 
-        .link_menu:hover {
+        .nav-list li {
+            margin: 0 15px;
+        }
+
+        .nav-list a {
             text-decoration: underline;
-            background-color: var(--cor3);
-            padding: 0;
             color: white;
+            font-family: 'Roboto', Helvetica, sans-serif;
+            padding: 8px 10px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        a {
-            color: rgb(9, 75, 182);
+        .nav-list a:hover {
+            background-color: #1B2D5E;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .link {
+            color: rgb(9, 76, 182);
             text-decoration: none;
             border-radius: 5px;
+            display: block;
+            padding: 5px;
         }
 
-        a:hover {
+        .link:hover {
             text-decoration: underline;
-            background-color: #abc8f36a;
+            background-color: #abbef36a;
             padding: 5px;
             color: rgb(3, 10, 67);
-        }
-
-        .menu-item {
-            background-color: var(--cor3);
-            border-radius: 5px;
-            width: 75px;
-            height: 20px;
-            padding: 10px;
-            margin-left: auto;
-            display: inline-block;
-        }
-
-        #pagina_principal {
-            width: 120px;
         }
 
         h1, h2 {
@@ -147,10 +147,12 @@
 <body>
     <header>
         <nav>
-            <h1>Trojans ou Cavalo de Tróia</h1>
-            <span class="menu-item"  id="pagina_principal"><a href="apresentacao.html" class="link_menu">Página principal</a></span>
-            <span class="menu-item" style="width: 40px;"><a href="perfil.html" class="link_menu">Perfil</a></span>
-            <span class="menu-item"><a href="conclusao.html" class="link_menu">Conclusão</a></span>
+            <h1>Trojan</h1>
+            <ul class="nav-list">
+                <li><a href="apresentacao.html">Página Inicial</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="conclusao.html">Conclusão</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -184,11 +186,10 @@
             <p>
                 Toda a estratégia dos trojans é baseada em enganar o usuário, e muitas vezes são bem-sucedidos, assim como os gregos foram contra os Troianos. Por isso, desconfie de toda oferta boa demais para ser verdade, pois normalmente não é.
             </p>
+            <h2>Os principais tipos dos trojans</h2>
             <p>
-                Quais são os principais tipos de trojan?
                 Das muitas vertentes deste malware específico, algumas se destacam por serem as mais utilizadas, cada uma com objetivo final diferente, mas todas com a função de camuflar a presença do vírus dentro de um sistema.
             </p>
-            <h2>Os principais tipos dos trojans</h2>
             <ul>
                 <li>Backdoor</li>
                 <p>
@@ -200,15 +201,12 @@
                     Este tipo se aproveita de vulnerabilidades de outros softwares para hospedar um javascript malicioso que fará o download de outros malwares para o dispositivo.
                     São muito utilizados para tomar o controle de sites que possuem alguma brecha na sua instalação ou estejam com algum plugin desatualizado em sites WordPress.
                 </p>
-                <li>Rootkit</li>
-                <p>
-                    Os rootkits são uma evolução dos trojans comuns, pois agem nas partes mais baixas do sistema operacional, muitas vezes modificando a própria estrutura do sistema.
-                    Tem a capacidade de esconder os traços das ações dos malwares, dificultando a detecção dos mesmos pelo usuário ou programas.
-                    São uma forma sofisticada de manter o trojan ativo sem que seja percebido, tornando-o ainda mais nocivo.
-                </p>
+        
                 <li>Trojans dropper/downloader</li>
                 <p>
-                    Basicamente, o downloader é um tipo de trojan que puxa outros softwares maliciosos para o sistema sem que sejam detectados pelos antivírus.
+                    Basicamente, o downloader é um tipo de trojan que puxa outros softwares malicios
+
+os para o sistema sem que sejam detectados pelos antivírus.
                     Os droppers são parecidos com o downloader, porém já contêm todos os componentes maliciosos. Eles entram no sistema, jogam o vírus e pronto, estão todos lá bombardeando o sistema.
                     Ambos são atualizados remotamente, por isso uma vez dentro do sistema, o hacker é capaz de tomar o controle rapidamente.
                 </p>
@@ -235,9 +233,9 @@
     </main>
     <div style="max-width: 600px; background-color: white; margin: auto; margin-top: 20px; padding: 10px; border-radius: 5px; box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
         <p style="font-weight: bold; margin: 5px;">Fontes:</p>
-        <a href="https://vantix.com.br/blog/ciberseguranca/trojan/" target="_blank" style="display: block; padding: 5px;">Vantix Trojan</a>
-        <a href="https://www.kaspersky.com.br/resource-center/threats/trojans" target="_blank" style="display: block; padding: 5px;">Kaspersky Trojan</a>
-        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" style="display: block; padding: 5px;">Malware ícones criados por xnimrodx - Flaticon</a>
+        <a href="https://vantix.com.br/blog/ciberseguranca/trojan/" target="_blank" class="link">Vantix Trojan</a>
+        <a href="https://www.kaspersky.com.br/resource-center/threats/trojans" target="_blank" class="link">Kaspersky Trojan</a>
+        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" class="link">Malware ícones criados por xnimrodx - Flaticon</a>
     </div>
     <footer>
         <p>Página desenvolvida por bubu!</p>

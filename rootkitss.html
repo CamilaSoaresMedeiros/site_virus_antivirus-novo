@@ -45,49 +45,51 @@
         }
 
         nav > h1 {
-            font-family: 'Orbitron', Helvetica, sans-serif;
+            font-family: var(--tnav);
             font-size: 40px;
             text-align: center;
-            padding: 60px 0px;
+            padding: 80px 0px;
         }
 
-        .link_menu {
-            text-decoration: none;
-            color: white;
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
         }
 
-        .link_menu:hover {
-            background-color: #1B2D5E;
-            padding: 0px;
-            color: rgb(255, 255, 255);
+        .nav-list li {
+            margin: 5px 15px;
+        }
+
+
+        .nav-list a {
             text-decoration: underline;
+            color: white;
+            font-family: var(--txp);
+            padding: 8px 10px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        a {
+        .nav-list a:hover {
+            background-color: #1B2D5E;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .link {
             color: rgb(9, 76, 182);
             text-decoration: none;
             border-radius: 5px;
+            display: block;
+            padding: 5px;
         }
 
-        a:hover {
+        .link:hover {
             text-decoration: underline;
             background-color: #abbef36a;
             padding: 5px;
             color: rgb(3, 10, 67);
-        }
-
-        .menu {
-            background-color: var(--cor3);
-            border-radius: 5px;
-            width: 75px;
-            height: 20px;
-            padding: 10px;
-            margin-left: auto;
-            display: inline-block;
-        }
-
-        #pagina_principal {
-            width: 120px;
         }
         
         h1, h2 {
@@ -148,15 +150,17 @@
 <body>
     <header>
         <nav>
-            <h1>Rootkits</h1>
-            <span class="menu" id="pagina_principal"><a href="apresentacao.html" class="link_menu">Página principal</a></span>
-            <span class="menu" style="width: 40px;"><a href="perfil.html" class="link_menu">Perfil</a></span>
-            <span class="menu"><a href="conclusao.html" class="link_menu">Conclusão</a></span>
+            <h1>Rootkit</h1>
+            <ul class="nav-list">
+                <li><a href="apresentacao.html">Página Inicial</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="conclusao.html">Conclusão</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <article>
-            <h1>O que é um Rootkits?</h1>
+            <h1>O que é um Rootkit?</h1>
             <p>Um rootkit é um software usado por criminosos cibernéticos para obter controle sobre um computador ou rede alvo. Os Rootkits podem por vezes aparecer como uma única peça de software, mas são frequentemente compostos por uma coleção de ferramentas que permitem aos hackers o controle a nível de administrador sobre o dispositivo alvo.</p>
 
             <p>Os Rootkits operam perto ou dentro do kernel do sistema operacional, o que lhes dá a capacidade de iniciar comandos para o computador. Qualquer coisa que utilize um sistema operacional é um alvo potencial para um rootkit – que, à medida que a Internet das Coisas se expande, pode incluir itens como o seu refrigerador ou termostato.</p>
@@ -181,30 +185,13 @@
                 Estas alterações incluem configurações de segurança, o que permite que os cibercriminosos consigam disseminar vários outros tipos de malware e até transformar o dispositivo em parte de uma rede botnet usada para executar ataques DDoS.
             </p>
             <h2>Tipos de Rootkits</h2>
-            <h3>Hardware ou rootkit de firmware</h3>
-            <p>
-                Os rootkits de hardware ou firmware podem afetar seu disco rígido, seu roteador ou a BIOS de seu sistema, que é o software instalado em um pequeno chip de memória na placa-mãe do seu computador. Em vez de ter como alvo o sistema operacional, eles visam o firmware do seu dispositivo para instalar malware, que é difícil de detectar. Porque afetam o hardware, permitem aos hackers registrar tudo que você tecla, bem como monitorizar a atividade online. Embora menos comuns que outros tipos, os rootkits de hardware ou firmware são uma grave ameaça à segurança online.
-            </p>
-            <h3>Rootkit do carregador de inicialização</h3>
-            <p>
-                O mecanismo do carregador de inicialização é responsável por carregar o sistema operacional em um computador. Os rootkits do carregador de inicialização atacam o sistema, substituindo o carregador de inicialização legítimo do seu computador por um alterado. Isto ativa o rootkit mesmo antes do sistema operacional do seu computador estar totalmente carregado.
-            </p>
-            <h3>Rootkit de memória</h3>
-            <p>
-                Os rootkits de memória escondem-se na memória RAM e utilizam os recursos do seu computador para realizar atividades maliciosas em segundo plano. Os rootkits de memória afetam o desempenho da memória RAM do seu computador. Como eles só vivem na RAM do seu computador e não injetam um código permanente, os rootkits de memória desaparecem assim que você reinicia o sistema – embora às vezes não seja tão fácil se livrar deles. A sua curta duração significa que tendem a não ser percebidos como uma ameaça significativa.
-            </p>
-            <h3>Rootkit de aplicativos</h3>
-            <p>
-                Os rootkits de aplicativos substituem os arquivos padrão em seu computador por arquivos rootkit e podem até mudar a maneira como os aplicativos padrão funcionam. Estes rootkits infectam programas como o Microsoft Office, Notepad, ou Paint. Os criminosos podem obter acesso ao seu computador cada vez que você executar esses programas. Como os programas infectados ainda rodam normalmente, a detecção de rootkit é difícil para os usuários – mas os programas antivírus podem detectá-los, pois ambos operam na camada do aplicativo.
-            </p>
-            <h3>Rootkits em modo Kernel</h3>
-            <p>
-                Os rootkits em modo Kernel estão entre os tipos mais severos desta ameaça, pois visam o núcleo do seu sistema operacional (ou seja, o nível kernel). Os hackers os usam, não só para acessar os arquivos no seu computador, mas também para alterar a funcionalidade do seu sistema operacional, adicionando seu próprio código. 
-            </p>
-            <h3>Rootkits virtuais</h3>
-            <p>
-                Um rootkit virtual se instala em segundo plano no sistema operacional do computador. Em seguida, hospeda os sistemas operacionais de destino como uma máquina virtual, o que lhe permite interceptar chamadas de hardware feitas pelo sistema operacional original. Este tipo de rootkit não tem que modificar o kernel para corromper o sistema operacional e pode ser muito difícil de detectar.
-            </p>
+
+            <p><strong>Rootkits de Kernel:</strong> Alteram o núcleo do sistema operacional para obter acesso e controle total, permitindo esconder a presença de outros malwares e manipular o sistema sem ser detectado.</p>
+
+            <p><strong>Rootkits de Usuário:</strong> Instalados no nível do usuário, esses rootkits afetam aplicativos e processos, muitas vezes comprometendo a integridade dos dados e a segurança do sistema sem alterar o núcleo.</p>
+
+            <p><strong>Rootkits de Firmware:</strong> Inseridos no firmware do hardware, como o BIOS, esses rootkits têm um controle profundo sobre o sistema, tornando-os difíceis de detectar e remover, pois operam antes que o sistema operacional seja carregado.</p>
+
             <h2>Sinais de infecção de um Rootkit</h2>
             <p><strong>Comportamento Incomum:</strong> Mudanças inesperadas no comportamento do sistema, como lentidão, falhas frequentes, ou funções que não estão operando corretamente, podem ser sinais de que um rootkit está presente.</p>
 
@@ -238,10 +225,10 @@
     </main>
     <div style="max-width: 600px; background-color: white; margin: auto;margin-top: 20px;padding: 10px;border-radius:5px;box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
         <p  style="font-weight: bold; margin: 5px;">Fontes:</p>
-        <a href="https://www.kaspersky.com.br/resource-center/definitions/what-is-rootkit" target="_blank" style="display: block;padding: 5px;">Kaspersky Rootkit</a>
-        <a href="https://nordvpn.com/pt-br/blog/rootkit-o-que-e/" target="_blank" style="display: block;padding: 5px;">Nordvpn Rootkits</a>
-        <a href="https://dciber.org/wp-content/uploads/2022/07/chip-based-rootkit-800x534-1.jpeg" target="_blank" style="display: block;padding: 5px;">Imagem 1</a>
-        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" style="display: block; padding: 5px;">Malware ícones criados por xnimrodx - Flaticon</a>
+        <a href="https://www.kaspersky.com.br/resource-center/definitions/what-is-rootkit" target="_blank">Kaspersky Rootkit</a>
+        <a href="https://nordvpn.com/pt-br/blog/rootkit-o-que-e/" target="_blank">Nordvpn Rootkits</a>
+        <a href="https://dciber.org/wp-content/uploads/2022/07/chip-based-rootkit-800x534-1.jpeg" target="_blank">Imagem 1</a>
+        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank">Malware ícones criados por xnimrodx - Flaticon</a>
     </div> 
     <footer>
         <p>

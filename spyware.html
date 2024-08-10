@@ -38,7 +38,7 @@
         nav {
             background-color: var(--cor2);
             color: white;
-            padding: 20px;
+            padding: 10px 20px;
             box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);
         }
 
@@ -46,49 +46,49 @@
             font-family: var(--tnav);
             font-size: 40px;
             text-align: center;
-            padding: 60px 0;
+            padding: 80px 0px;
         }
 
-        .link-menu {
-            text-decoration: none;
-            color: white;
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
         }
 
-        .link-menu:hover {
-            background-color: #1B2D5E;
-            padding: 0;
-            color: rgb(255, 255, 255);
+        .nav-list li {
+            margin: 5px 15px;
+        }
+
+        .nav-list a {
             text-decoration: underline;
+            color: white;
+            font-family: var(--txp);
+            padding: 8px 10px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        a {
+        .nav-list a:hover {
+            background-color: #1B2D5E;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        
+        .link {
             color: rgb(9, 76, 182);
             text-decoration: none;
             border-radius: 5px;
+            display: block;
+            padding: 5px;
         }
 
-        a:hover {
+        .link:hover {
             text-decoration: underline;
             background-color: #abbef36a;
             padding: 5px;
             color: rgb(3, 10, 67);
         }
-
-        .menu-item {
-            background-color: var(--cor3);
-            border-radius: 5px;
-            width: 75px;
-            height: 20px;
-            padding: 10px;
-            margin-left: auto;
-            display: inline-block;
-            text-align: center;
-        }
         
-        #pagina_principal {
-            width: 120px;
-        }
-
         h1, h2 {
             font-family: var(--tp);
             font-weight: 100;
@@ -144,9 +144,11 @@
     <header>
         <nav>
             <h1>Spyware</h1>
-            <span class="menu-item" id="pagina_principal"><a href="apresentacao.html" class="link-menu">Página principal</a></span>
-            <span class="menu-item" style="width: 40px;"><a href="perfil.html" class="link-menu">Perfil</a></span>
-            <span class="menu-item"><a href="conclusao.html" class="link-menu">Conclusão</a></span>
+            <ul class="nav-list">
+                <li><a href="apresentacao.html">Página Inicial</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="conclusao.html">Conclusão</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -163,21 +165,17 @@
             <div style="text-align: center;">
                 <img class="img_resp" src="imagens/spyware.webp" alt="spyware" style="width: 650px;">
             </div>
-            <h2>Como o spyware age?</h2>
-            <p><strong>Registro de toques na tela e na rede:</strong> também conhecido como "keyloggers", esse malware é capaz de capturar as atividades do computador, incluindo histórico do teclado, histórico de pesquisa, credenciais em sites de bate-papo etc.</p>
-
-            <p><strong>Trojans bancários:</strong> um dos principais fins dos spywares é o roubo de dados pessoais, informações bancárias e de cartões de crédito, para a realização de transações financeiras.</p>
-
-            <p><strong>Controle remoto do dispositivo:</strong> esses softwares agem na configuração do software e permitem o controle do dispositivo à distância, por terceiros.</p>
-
-            <p><strong>Redução de velocidade do dispositivo:</strong> spyware pode reduzir a velocidade e eficiência do sistema operacional, causando lentidão e travas no sistema.</p>
-
             <h2>Tipos de spyware</h2>
-            <p><strong>Trojans:</strong> São malwares que se disfarçam de programas legítimos enquanto ocultam funcionalidades maliciosas. Muitas vezes, esse tipo de malware é usado para se infiltrar em um dispositivo e depois instalar ou baixar o spyware.</p>
-            <p><strong>Adware:</strong> Projetado para coletar informações detalhadas sobre um usuário e seus hábitos e interesses. Adware é um spyware projetado para coletar informações para fins de marketing ou para veicular anúncios indesejados, enganosos ou maliciosos.</p>
-            <p><strong>Cookies de rastreamento:</strong> Cookies são arquivos salvos em um computador por um site para armazenar informações de configuração. Um exemplo é um token de autenticação armazenado para permitir logins repetidos em um dispositivo confiável após clicar em “Lembrar-me”. Os cookies de rastreamento são projetados para serem acessados por muitos sites, permitindo que eles rastreiem um usuário pela Internet.</p>
-            <p><strong>Monitores de sistema:</strong> São malwares que monitoram as atividades de um usuário em um computador e as enviam ao invasor. Um keylogger é um tipo específico de monitor de sistema que registra as teclas digitadas, mas os monitores do sistema também podem rastrear sites visitados, acesso a arquivos, e-mails etc.</p>
 
+            <p><strong>Keyloggers:</strong> Capturam e registram todas as teclas digitadas pelo usuário, coletando informações como senhas e dados pessoais.</p>
+
+            <p><strong>Tracking Cookies:</strong> Arquivos que ficam armazenados no navegador e rastreiam a atividade de navegação do usuário, coletando dados sobre sites visitados e preferências.</p>
+
+            <p><strong>Dialers:</strong> Alteram as configurações de conexão do computador para fazer chamadas de longa distância ou para números pagos, geralmente sem o conhecimento do usuário.</p>
+
+            <p><strong>System Monitors:</strong> Monitoram e registram as atividades do sistema, como aplicativos usados e sites visitados, enviando essas informações para terceiros.</p>
+
+            <p><strong>RATs (Remote Access Trojans):</strong> Permitem que um invasor controle o computador remotamente, coletando informações e realizando ações sem o consentimento do usuário.</p>
             <h2>Sinais de infecção de um spyware</h2>
             <p><strong>Desempenho Lento:</strong> Se o seu computador ou dispositivo está mais lento do que o normal, pode ser um sinal de spyware, que pode estar consumindo recursos do sistema.</p>
 
@@ -198,10 +196,10 @@
     </main>
     <div style="max-width: 600px; background-color: white; margin: auto; margin-top: 20px; padding: 10px; border-radius: 5px; box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
         <p style="font-weight: bold; margin: 5px;">Fontes:</p>
-        <a href="https://www.techtudo.com.br/noticias/2019/07/o-que-e-spyware-entenda-como-age-o-app-espiao-e-veja-como-se-proteger.ghtml" target="_blank" style="display: block; padding: 5px;">TechTudo Spyware</a>
-        <a href="https://www.kaspersky.com.br/resource-center/threats/spyware" target="_blank" style="display: block; padding: 5px;">Kaspersky Spyware</a>
-        <a href="https://s2-techtudo.glbimg.com/V0vXm-AL0h0NPKxSePAYIYZPRLM=/0x0:695x484/1000x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2014/08/13/pen-drive-3.jpg" target="_blank" style="display: block; padding: 5px;">Imagem 1</a>
-        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank" style="display: block; padding: 5px;">Malware ícones criados por xnimrodx - Flaticon</a>
+        <a href="https://www.techtudo.com.br/noticias/2019/07/o-que-e-spyware-entenda-como-age-o-app-espiao-e-veja-como-se-proteger.ghtml" target="_blank">TechTudo Spyware</a>
+        <a href="https://www.kaspersky.com.br/resource-center/threats/spyware" target="_blank">Kaspersky Spyware</a>
+        <a href="https://s2-techtudo.glbimg.com/V0vXm-AL0h0NPKxSePAYIYZPRLM=/0x0:695x484/1000x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2014/08/13/pen-drive-3.jpg" target="_blank">Imagem 1</a>
+        <a href="https://www.flaticon.com/br/icones-gratis/malware" title="malware ícones" target="_blank">Malware ícones criados por xnimrodx - Flaticon</a>
     </div> 
     <footer>
         <p>Página desenvolvida by bubu!</p>

@@ -12,6 +12,15 @@
 
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+        :root {
+            --txp: 'Roboto', Helvetica, sans-serif;
+            --tnav: 'Orbitron', Helvetica, sans-serif;
+            --tp: 'Audiowide', Helvetica, sans-serif;
+            --cor1: #80DDF2;
+            --cor2: #1B67B3;
+            --cor3: #1B2D5E;
+        }
+
 
         *{
             padding: 0;
@@ -28,58 +37,59 @@
             color: white;
         }
         nav {
-            background-color: #1B67B3;
+            background-color: var(--cor2);
             color: white;
             padding:20px;
-            box-shadow:1px 1px 15px rgba(0, 0, 0, 0.303); 
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);
         }
 
         nav > h1 {
-            font-family: 'Orbitron', Helvetica, sans-serif;
+            font-family: var(--tnav);
             font-size: 40px;
             text-align: center;
-            padding: 60px 0px;
-            font-weight: 400;
+            padding: 80px 0px;
+            font-weight: 100;
         }
 
-        .link_menu {
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list li {
+            margin: 5px 15px;
+        }
+
+
+        .nav-list a {
+            text-decoration: underline;
             color: white;
+            font-family: var(--txp);
+            padding: 8px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: #1B2D5E;
+            color: #fff;
+            border-radius: 5px;
             text-decoration: none;
         }
 
-        .link_menu:hover {
-            background-color: #1B2D5E;
-            padding: 0px;
-            color: rgb(255, 255, 255);
-            text-decoration: underline;
-        }
-
-        a {
+        .link {
             color: rgb(9, 76, 182);
             text-decoration: none;
             border-radius: 5px;
+            display: block;
+            padding: 5px;
         }
 
-
-        a:hover {
+        .link:hover {
             text-decoration: underline;
             background-color: #abbef36a;
             padding: 5px;
             color: rgb(3, 10, 67);
-        }
-
-        .menu {
-            background-color: #1B2D5E;
-            border-radius: 5px;
-            width: 75px;
-            height: 20px;
-            padding: 10px;
-            margin-left: auto;
-            display: inline-block;
-        }
-
-        #pagina_principal{
-            width: 120px;
         }
 
         h2 {
@@ -134,14 +144,6 @@
         textarea {
             resize: none;
             height: 150px;
-        }
-
-        input[type="date"]{
-            padding: 8px;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-            font-family: 'Roboto', Arial, Helvetica, sans-serif;
-            font-size: 16px;
         }
 
         button {
@@ -202,8 +204,10 @@
     <header>
         <nav>
             <h1>Seu perfil</h1>
-            <span class="menu"><a href="conclusao.html" class="link_menu">Conclusão</a></span>
-            <span class="menu" id="pagina_principal"><a href="apresentacao.html" class="link_menu">Página principal</a></span>
+            <ul class="nav-list">
+            <span id="menu"><a href="apresentacao.html">Página Principal</a></span>
+            <span id="menu"><a href="conclusao.html" >Conclusão</a></span>
+            </ul>
         </nav>
     </header>
     
@@ -219,12 +223,7 @@
                 <br>
                 <label for="nome-usuario">
                     Nome:
-                    <input type="text" id="nome-usuario" name="nome-usuario" placeholder="Digite seu nome">
-                </label>
-                <br>
-                <label for="data_nasc">
-                    Data de nascimento:
-                    <input type="date" id="data_nasc" name="data" placeholder="dd/mm/yyyy">
+                    <input type="text" id="nome-usuario" name="nome-usuario" placeholder="Digite seu nome" value="Camila Soares">
                 </label>
                 <br>
                 <label for="bio-usuario">
@@ -256,9 +255,9 @@
         <section id="suporte">
             <h2>Suporte e Feedback</h2>
             <form id="form-feedback">
-                <label for="feedback">
+                <label for="sugestoes">
                     Sugestões, dúvidas ou reclamações:
-                    <textarea id="feedabck" name="feed" rows="4" placeholder="Digite aqui..."></textarea>
+                    <textarea id="sugestoes" name="sugestoes" rows="4" placeholder="Digite aqui..."></textarea>
                 </label>
                 <br>
                 <button type="submit">Enviar Feedback</button>
@@ -268,10 +267,10 @@
         <section id="redes-sociais">
             <h2>Redes Sociais do Site</h2>
             <ul>
-                <li><a href="" target="_blank">Facebook</a></li>
-                <li><a href="" target="_blank">Twitter</a></li>
-                <li><a href="" target="_blank">Instagram</a></li>
-                <li><a href="" target="_blank">LinkedIn</a></li>
+                <li><a href="https://facebook.com/seusite" target="_blank" class="link">Facebook</a></li>
+                <li><a href="https://twitter.com/seusite" target="_blank" class="link">Twitter</a></li>
+                <li><a href="https://instagram.com/seusite" target="_blank" class="link">Instagram</a></li>
+                <li><a href="https://linkedin.com/company/seusite" target="_blank" class="link">LinkedIn</a></li>
             </ul>
         </section>
     </main>

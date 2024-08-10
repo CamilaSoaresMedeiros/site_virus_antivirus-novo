@@ -40,55 +40,58 @@
         nav {
             background-color: var(--cor2);
             color: white;
-            padding: 20px;
+            padding: 10px 20px;
             box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);
         }
 
         nav > h1 {
-            font-family: 'Orbitron', Helvetica, sans-serif;
+            font-family: var(--tnav);
             font-size: 40px;
             text-align: center;
-            padding: 60px 0px;
+            padding: 80px 0px;
         }
 
-        .link_menu {
-            text-decoration: none;
-            color: white;
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
         }
 
-        .link_menu:hover {
-            background-color: #1B2D5E;
-            padding: 0px;
-            color: rgb(255, 255, 255);
+        .nav-list li {
+            margin: 5px 15px;
+        }
+
+
+        .nav-list a {
             text-decoration: underline;
+            color: white;
+            font-family: var(--txp);
+            padding: 8px 10px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        a {
+        .nav-list a:hover {
+            background-color: #1B2D5E;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .link {
             color: rgb(9, 76, 182);
             text-decoration: none;
             border-radius: 5px;
+            display: block;
+            padding: 5px;
         }
 
-        a:hover {
+        .link:hover {
             text-decoration: underline;
             background-color: #abbef36a;
             padding: 5px;
             color: rgb(3, 10, 67);
         }
-
-        .menu {
-            background-color: var(--cor3);
-            border-radius: 5px;
-            width: 40px;
-            height: 20px;
-            padding: 10px;
-            margin-left: auto;
-            display: inline-block;
-        }
-
-        #pagina_principal {
-            width: 120px;
-        }
+        
         
         h1, h2 {
             font-family: var(--tp);
@@ -117,24 +120,35 @@
             margin: 15px 0px;
         }
 
+        /* Container para rolagem horizontal */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Suporte para rolagem suave em dispositivos iOS */
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
         }
 
         th, td {
-            border: 1px solid #dddddd;
+            padding: 10px;
+            border: 1px solid #ddd;
             text-align: left;
-            padding: 8px;
         }
 
         th {
-            background-color: #3EA0C4;
+            background-color: #f4f4f4;
         }
 
-        caption {
-            font-weight: bold;
-            margin: 10px 0;
+        thead th {
+            color: #000;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #fff;
         }
 
         footer {
@@ -154,8 +168,10 @@
     <header>
         <nav>
             <h1>Conclusão</h1>
-            <span class="menu" id="pagina_principal"><a href="apresentacao.html" class="link_menu">Página principal</a></span>
-            <span class="menu"><a href="perfil.html" class="link_menu">Perfil</a></span>
+            <ul class="nav-list">
+                <li><a href="apresentacao.html">Página principal</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -174,77 +190,79 @@
 
             <p>A proteção contra malware envolve práticas como usar antivírus, manter o sistema e os softwares atualizados, e ter cuidado ao abrir e-mails ou baixar arquivos de fontes desconhecidas.</p>
 
-            <table style="border-collapse: collapse;overflow-x:auto;display: block;margin: 0 auto;">
-                <caption style="font-weight: 400;">Tabela Comparativa de Malware</caption>
-                <thead>
-                    <tr style="color: white;">
-                        <th>Característica</th>
-                        <th>Trojan</th>
-                        <th>Adware</th>
-                        <th>Rootkit</th>
-                        <th>Spyware</th>
-                        <th>Ransomware</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="background-color: #1B2D5E; color: white;">Definição</td>
-                        <td>Malware disfarçado como software legítimo</td>
-                        <td>Software que exibe anúncios indesejados</td>
-                        <td>Malware que oculta sua presença e atividades</td>
-                        <td>Malware que coleta informações pessoais</td>
-                        <td>Malware que exige resgate para liberar o sistema</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #1B2D5E; color: white;">Objetivo Principal</td>
-                        <td>Enganar o usuário para obter acesso ao sistema</td>
-                        <td>Gerar receita por meio de anúncios</td>
-                        <td>Manter o controle oculto sobre o sistema</td>
-                        <td>Monitorar e coletar dados do usuário</td>
-                        <td>Bloquear o acesso ao sistema ou dados</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #1B2D5E; color: white;">Método de Infecção</td>
-                        <td>Se esconde em arquivos ou aplicativos</td>
-                        <td>Instala-se com software gratuito ou pirata</td>
-                        <td>Explora vulnerabilidades do sistema para se esconder</td>
-                        <td>Se instala frequentemente sem o conhecimento do usuário</td>
-                        <td>Entra no sistema através de e-mails ou downloads maliciosos</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #1B2D5E; color: white;">Efeitos</td>
-                        <td>Pode permitir acesso remoto, roubo de dados</td>
-                        <td>Reduz o desempenho e afeta a privacidade</td>
-                        <td>Pode alterar o sistema operacional para ocultar outros malwares</td>
-                        <td>Coleta dados pessoais, como senhas e histórico de navegação</td>
-                        <td>Criptografa arquivos e exige pagamento para descriptografia</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #1B2D5E; color: white;">Sinais de Infecção</td>
-                        <td>Comportamento estranho do sistema, lentidão</td>
-                        <td>Pop-ups e anúncios excessivos</td>
-                        <td>Alterações suspeitas no sistema, dificuldades em detectar malware</td>
-                        <td>Lentidão, mudanças nas configurações do navegador</td>
-                        <td>Arquivos criptografados, mensagens de resgate</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #1B2D5E; color: white;">Método de Remoção</td>
-                        <td>Antivírus e remoção manual de aplicativos</td>
-                        <td>Antivírus e ferramentas anti-adware</td>
-                        <td>Ferramentas especializadas em remoção de rootkits</td>
-                        <td>Antivírus e ferramentas anti-spyware</td>
-                        <td>Ferramentas de recuperação de dados e restauração do sistema</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #1B2D5E; color: white;">Exemplos Comuns</td>
-                        <td>Emotet, Zeus</td>
-                        <td>Gator, Bonzi Buddy</td>
-                        <td>Stuxnet, TDL-4</td>
-                        <td>Keyloggers, CoolWebSearch</td>
-                        <td>WannaCry, Cryptolocker</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-container">
+                <table style="display: block;margin: 0 auto;">
+                    <caption style="font-weight: 400;">Tabela Comparativa de Malware</caption>
+                    <thead>
+                        <tr style="color: white;">
+                            <th>Característica</th>
+                            <th>Trojan</th>
+                            <th>Adware</th>
+                            <th>Rootkit</th>
+                            <th>Spyware</th>
+                            <th>Ransomware</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background-color: #1B2D5E; color: white;">Definição</td>
+                            <td>Malware disfarçado como software legítimo</td>
+                            <td>Software que exibe anúncios indesejados</td>
+                            <td>Malware que oculta sua presença e atividades</td>
+                            <td>Malware que coleta informações pessoais</td>
+                            <td>Malware que exige resgate para liberar o sistema</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #1B2D5E; color: white;">Objetivo Principal</td>
+                            <td>Enganar o usuário para obter acesso ao sistema</td>
+                            <td>Gerar receita por meio de anúncios</td>
+                            <td>Manter o controle oculto sobre o sistema</td>
+                            <td>Monitorar e coletar dados do usuário</td>
+                            <td>Bloquear o acesso ao sistema ou dados</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #1B2D5E; color: white;">Método de Infecção</td>
+                            <td>Se esconde em arquivos ou aplicativos</td>
+                            <td>Instala-se com software gratuito ou pirata</td>
+                            <td>Explora vulnerabilidades do sistema para se esconder</td>
+                            <td>Se instala frequentemente sem o conhecimento do usuário</td>
+                            <td>Entra no sistema através de e-mails ou downloads maliciosos</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #1B2D5E; color: white;">Efeitos</td>
+                            <td>Pode permitir acesso remoto, roubo de dados</td>
+                            <td>Reduz o desempenho e afeta a privacidade</td>
+                            <td>Pode alterar o sistema operacional para ocultar outros malwares</td>
+                            <td>Coleta dados pessoais, como senhas e histórico de navegação</td>
+                            <td>Criptografa arquivos e exige pagamento para descriptografia</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #1B2D5E; color: white;">Sinais de Infecção</td>
+                            <td>Comportamento estranho do sistema, lentidão</td>
+                            <td>Pop-ups e anúncios excessivos</td>
+                            <td>Alterações suspeitas no sistema, dificuldades em detectar malware</td>
+                            <td>Lentidão, mudanças nas configurações do navegador</td>
+                            <td>Arquivos criptografados, mensagens de resgate</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #1B2D5E; color: white;">Método de Remoção</td>
+                            <td>Antivírus e remoção manual de aplicativos</td>
+                            <td>Antivírus e ferramentas anti-adware</td>
+                            <td>Ferramentas especializadas em remoção de rootkits</td>
+                            <td>Antivírus e ferramentas anti-spyware</td>
+                            <td>Ferramentas de recuperação de dados e restauração do sistema</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #1B2D5E; color: white;">Exemplos Comuns</td>
+                            <td>Emotet, Zeus</td>
+                            <td>Gator, Bonzi Buddy</td>
+                            <td>Stuxnet, TDL-4</td>
+                            <td>Keyloggers, CoolWebSearch</td>
+                            <td>WannaCry, Cryptolocker</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <br>
             <h2>Como se proteger de malwares?</h2>
             <p><strong>Instale um antivírus confiável:</strong> Use um software antivírus atualizado e certifique-se de que ele esteja configurado para realizar varreduras regulares no seu sistema.</p>
