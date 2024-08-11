@@ -81,7 +81,6 @@
             color: rgb(9, 76, 182);
             text-decoration: none;
             border-radius: 5px;
-            display: block;
             padding: 5px;
         }
 
@@ -97,6 +96,11 @@
             font-family: var(--tp);
             font-weight: 100;
             padding: 10px;
+        }
+
+        h3{
+            margin-top: px;
+            font-weight: 300;
         }
 
         main {
@@ -120,10 +124,9 @@
             margin: 15px 0px;
         }
 
-        /* Container para rolagem horizontal */
         .table-container {
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* Suporte para rolagem suave em dispositivos iOS */
+            -webkit-overflow-scrolling: touch;
         }
 
         table {
@@ -151,6 +154,31 @@
             background-color: #fff;
         }
 
+        aside {
+            width: 700px;
+            background-color: #ffffff;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 20px 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.351);
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        .img {
+            float: right;
+            width: 200px;
+        }
+
+        .saiba {
+            list-style-position: inside;
+            margin-bottom: 30px;
+        }
+
+        li {
+            margin: 5px;
+        }
+
         footer {
             background-color: #1B67B3;
             color: white;
@@ -175,6 +203,7 @@
         </nav>
     </header>
     <main>
+        <h1>Tabela para entender as diferenças entre alguns os tipos de malwares</h1>
             <div class="table-container">
                 <table style="display: block;margin: 0 auto;">
                     <caption style="font-weight: 400;">Tabela Comparativa de Malware</caption>
@@ -248,30 +277,17 @@
                     </tbody>
                 </table>
             </div>
-            <br>
-            <h2>Como se proteger de malwares?</h2>
-            <p><strong>Instale um antivírus confiável:</strong> Use um software antivírus atualizado e certifique-se de que ele esteja configurado para realizar varreduras regulares no seu sistema.</p>
-
-            <p><strong>Mantenha o sistema e os programas atualizados:</strong> Sistemas operacionais e aplicativos frequentemente recebem atualizações que corrigem vulnerabilidades de segurança. Mantenha tudo atualizado para reduzir o risco de exploração de falhas.</p>
-
-            <p><strong>Use um firewall:</strong> Ative o firewall no seu dispositivo para controlar o tráfego de rede e bloquear conexões não autorizadas.</p>
-
-            <p><strong>Não baixe software de fontes não confiáveis:</strong> Baixe programas apenas de sites oficiais ou de confiança. Evite abrir arquivos ou clicar em links de e-mails de remetentes desconhecidos.</p>
-
-            <p><strong>Tenha cuidado com e-mails e links:</strong> Não clique em links nem baixe arquivos de e-mails suspeitos. Verifique a autenticidade do remetente antes de abrir qualquer anexo.</p>
-
-            <p><strong>Utilize senhas fortes e únicas:</strong> Crie senhas complexas e diferentes para cada conta e serviço. Considere usar um gerenciador de senhas para ajudá-lo a manter as senhas seguras.</p>
-
-            <p><strong>Habilite a autenticação de dois fatores (2FA):</strong> A autenticação de dois fatores adiciona uma camada extra de segurança ao exigir uma segunda forma de verificação além da sua senha.</p>
-
-            <p><strong>Faça backups regulares:</strong> Realize cópias de segurança dos seus dados importantes regularmente. Isso ajudará a recuperar seus arquivos em caso de ataque de ransomware ou perda de dados.</p>
-
-            <p><strong>Desative macros em documentos:</strong> Macros em documentos podem ser uma via para malware. Desative a execução automática de macros em seus aplicativos de escritório.</p>
-
-            <p><strong>Esteja atento ao phishing e outras táticas de engenharia social:</strong> Familiarize-se com táticas de phishing e outras tentativas de manipulação para estar melhor preparado para identificá-las e evitá-las.</p>
-
-            <p><strong>Use conexões seguras</strong>: Conecte-se a redes Wi-Fi seguras e evite redes públicas não protegidas para reduzir o risco de interceptação de dados.</p>
-            <br><br>
+            <h2 style="font-weight: 100; font-size: 20px;margin-top: 40px;">Vamos considerar a pergunta mais importante de todas:<strong style="font-family: var(--txp);font-weight: 300;"> “Como posso garantir que meu computador ou minha rede estão livres de malware?”</strong>
+            </h2>
+            <p>
+                <strong>A resposta tem duas partes: </strong>vigilância pessoal e ferramentas de proteção. Uma das maneiras mais conhecidas de propagar malware é por e-mail, pois ele pode ser disfarçado como uma mensagem de uma empresa conhecida, por exemplo, um banco, ou um e-mail pessoal de um amigo.
+            </p>
+            <p>
+                Fique atento a e-mails que pedem suas senhas. Ou e-mails que parecem vir de amigos, mas que têm somente uma mensagem como “Veja só que legal este site!”, seguido de um link.
+            </p>
+            <p>
+                A vigilância pessoal é a primeira camada de proteção contra malware, mas apenas ter cuidado não basta. Como a segurança corporativa não é perfeita, até os downloads feitos em sites legítimos podem conter um malware. Isso significa que até o usuário mais cauteloso corre risco, a menos que você tome outras medidas.
+            </p>
             <h1 style="text-align: center;">Sobre os Antivírus</h1>
             <p>Em conclusão, cada antivírus possui características específicas que atendem a diferentes necessidades e preferências dos usuários, desde a proteção básica até soluções mais completas e avançadas. Escolher o antivírus certo depende das prioridades individuais em termos de segurança, desempenho e funcionalidades adicionais.</p>
 
@@ -286,10 +302,46 @@
             <p><strong>McAfee</strong> fornece proteção abrangente e recursos como proteção de identidade e VPN, com uma interface amigável.</p>
 
             <p><strong>Avast</strong> oferece uma versão gratuita eficiente e, na versão paga, recursos adicionais como firewall e proteção de e-mail.</p>
-
     </main>
+    <aside>
+        <h2 style="margin-bottom: 10px;">Saiba mais em:</h2>
+        <img src="imagens_videos/artigo.png" class="img">
+        <h3>Artigos:</h3>
+        <p>
+            <ul class="saiba">
+                <li>
+                    <a href="https://canaltech.com.br/seguranca/origem-do-virus-de-computador-197667/" class="link">História da segurança virtual: a origem do vírus de computador</a>
+                </li>
+                <li>
+                    <a href="https://canaltech.com.br/seguranca/historia-da-seguranca-virtual-a-origem-do-antivirus-de-computador-197745/" class="link">História da segurança virtual: a origem do antivírus de computador</a>
+                </li>
+                <li>
+                    <a href="https://www.tecmundo.com.br/antivirus/108142-6-virus-computador-iconicos-historia.htm" class="link">6 dos vírus de computador mais icônicos da História</a>
+                </li>
+                <li>
+                    <a href="https://canaltech.com.br/seguranca/como-remover-virus-do-pc/" class="link">Como remover vírus do PC | Guia Prático</a>
+                </li>
+            </ul>
+        </p>
+        <img src="imagens_videos/video.jpg" class="img">
+        <h3>Vídeos:</h3>
+            <ul class="saiba">
+                <li>
+                    <a href="https://youtu.be/rDliR1iimkc?si=z7ZumG0W3TzlTnRJ" class="link">Antivírus gratuito ou pago? Fizemos um comparativo de Avast</a>
+                </li>
+                <li>
+                    <a href="https://youtu.be/gBfMABd1IZY?si=_hPopJMv-ZvkeKUl" class="link">Antivírus</a>
+                </li>
+                <li>
+                    <a href="https://youtu.be/MHxi0ukDJ2s?si=ytXSycap0rvh3D_E" class="link">Como um antivírus funsiona?</a>
+                </li>
+                <li>
+                    <a href="https://youtu.be/VJFaO2-zsCU?si=Lt2ow5d3Fi0qU-iB" class="link">Tipos de vírus explicados em 8 minutos</a>
+                </li>
+            </ul>
+    </aside>
     <footer>
-        <p>Página desenvolvida by bubu!</p>
+        <p>Página desenvolvida by bubu e Camila!</p>
     </footer>
 </body>
 </html>
