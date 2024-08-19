@@ -25,18 +25,27 @@
             color: white;
         }
 
+        header {
+            position: -webkit-sticky; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
         nav {
             background-color: #1B67B3;
             color: white;
             padding: 10px 20px;
             box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);
+            transition: padding 0.3s ease;
         }
 
         nav > h1 {
             font-family: 'Orbitron', Helvetica, sans-serif;
             font-size: 40px;
             text-align: center;
-            padding: 80px 0px;
+            padding: 50px 0px;
         }
 
         .nav-list {
@@ -78,6 +87,17 @@
             background-color: #abbef36a;
             padding: 5px;
             color: rgb(3, 10, 67);
+        }
+
+        #tipos{
+            position: fixed;
+            background-color: #1B2D5E;
+            color: white;
+            padding: 5px;
+            margin-top: 15px;
+            width: 250px;
+            margin-left: 20px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);
         }
 
         main {
@@ -160,6 +180,14 @@
             </ul>
         </nav>
     </header>
+    <div id="tipos">
+        <p style="padding: 5px;font-family: var(--tp);background-color: #1B67B3;margin: 0;">Navegue:</p>
+        <a href="pagina_antivirus01.html#norton" class="link" style="display: block; padding: 5px;color: white;">Norton</a>
+        <a href="pagina_antivirus01.html#kaspersky" class="link"  style="display: block; padding: 5px;color: white;">Kaspersky</a>
+        <a href="pagina_antivirus01.html#bitdefender" class="link"  style="display: block; padding: 5px;color: white;">Bitdefender</a>
+        <a href="pagina_antivirus01.html#mcafee" class="link"  style="display: block; padding: 5px;color: white;">McAfee</a>
+        <a href="pagina_antivirus01.html#avast" class="link"  style="display: block; padding: 5px;color: white;">Avast</a>
+    </div>
     <main>
         <div>
             <h1>Norton

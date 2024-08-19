@@ -37,18 +37,27 @@
             color: white;
         }
 
+        header {
+            position: -webkit-sticky; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
         nav {
-            background-color: var(--cor2);
+            background-color: #1B67B3;
             color: white;
-            padding: 20px;
+            padding: 10px 20px;
             box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);
+            transition: padding 0.3s ease;
         }
 
         nav > h1 {
-            font-family: var(--tnav);
+            font-family: 'Orbitron', Helvetica, sans-serif;
             font-size: 40px;
             text-align: center;
-            padding: 80px 0px;
+            padding: 50px 0px;
         }
 
         .nav-list {
@@ -101,6 +110,17 @@
 
         h3 {
             font-family: var(--txp);
+        }
+
+        #tipos{
+            position: fixed;
+            background-color: #1B2D5E;
+            color: white;
+            padding: 5px;
+            margin-top: 15px;
+            width: 250px;
+            margin-left: 20px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);
         }
 
         main {
@@ -159,6 +179,14 @@
             </ul>
         </nav>
     </header>
+    <div id="tipos">
+        <p style="padding: 5px;font-family: var(--tp);background-color: #1B67B3;">Navegue:</p>
+        <a href="rootkitss.html" class="link" style="display: block; padding: 5px;color: white;">Rootkits</a>
+        <a href="adware.html" class="link"  style="display: block; padding: 5px;color: white;">Adware</a>
+        <a href="ransomware.html" class="link"  style="display: block; padding: 5px;color: white;">Ransomware</a>
+        <a href="spyware.html" class="link"  style="display: block; padding: 5px;color: white;">Spyware</a>
+        <a href="trojans.html" class="link"  style="display: block; padding: 5px;color: white;">Trojan</a>
+    </div>
     <main>
         <article>
             <h1>O que é um Rootkit?</h1>
