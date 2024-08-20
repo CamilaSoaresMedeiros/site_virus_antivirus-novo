@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+        :root {
+            --txp: 'Roboto', Helvetica, sans-serif;
+            --tnav: 'Orbitron', Helvetica, sans-serif;
+            --tp: 'Audiowide', Helvetica, sans-serif;
+            --cor1: #80DDF2;
+            --cor2: #1B67B3;
+            --cor3: #1B2D5E;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #80DDF2;
+            font-family: 'Roboto', Helvetica, sans-serif;
+        }
+
+        ::selection {
+            background-color: #3ea0c4;
+            color: white;
+        }
+
+        header {
+            position: -webkit-sticky; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            background-color: #1B67B3;
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);
+        }
+
+        nav > h1 {
+            font-family: var(--tnav);
+            font-size: 40px;
+            text-align: center;
+            padding: 50px 0px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list li {
+            margin: 5px 15px;
+        }
+
+        .nav-list a {
+            text-decoration: underline;
+            color: white;
+            font-family: var(--txp);
+            padding: 8px 10px;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 18px;
+        }
+
+        .nav-list a:hover {
+            background-color: #1B2D5E; 
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        #link_selec{
+            background-color: #1B2D5E;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        #link_selec:hover{
+            text-decoration: underline;
+        }
+
+        .link{
+            color: rgb(9, 76, 182);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+            background-color: #abbef36a;
+            padding: 5px;
+            color: rgb(3, 10, 67);
+        }
+
+        main {
+            background-color: white;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px 40px;
+            border-radius: 0px 0px 5px 5px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);
+        }
+
+        h1, h2 {
+            font-family: 'Audiowide', Helvetica, sans-serif;
+            font-weight: 100;
+            padding: 10px 0px;
+        }
+
+        p {
+            line-height: 1.8em;
+            text-align: justify;
+        }
+
+        #bold-link {
+            color: black;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .imagem-responsiva {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style-position: inside;
+        }
+
+        li {
+            margin: 5px;
+        }
+
+        #videodiv{
+            width: 400px;
+            background-color: #1B67B3;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        #video{
+            width: 100%;
+        }
+
+        footer {
+            background-color: #1B67B3;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer p {
+            padding: 5px;
+            text-align: center;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .login-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+    <link rel="shortcut icon" href="imagens/malware.png" type="image/x-icon">
+</head>
+<body>
+    <div class="overlay">
+        <div class="login-box">
+            <h2>Faça Login ou Cadastre-se</h2>
+            <p>Você precisa estar logado para acessar esta página.</p>
+    <header>
+        <nav>
+            <h1>Vírus e Antivírus</h1>
+            <ul class="nav-list">
+                <li><a href="apresentacao.html" id="link_selec">Página principal</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="conclusao.html">Conclusão</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <h1>O que é vírus de computador?</h1>
+            <p>Um vírus de computador é um tipo de malware que se liga a outros programas, se autorreplica e se espalha de um computador para outro. Quando um vírus infecta um computador, ele faz cópias de si mesmo e anexa a outros arquivos ou documentos. Ele depois modifica esses arquivos e continua a se espalhar.</p>
+            <p>Os vírus infectam os computadores discretamente e, muitas vezes, são projetados para destruir arquivos pessoais ou obter o controle de dispositivos. Ao fazer cópias de si mesmos, os vírus de computador se espalham por dispositivos e redes, como vírus biológicos, que passam de pessoa em pessoa. Assim como as versões biológicas, alguns vírus de computador são simplesmente irritantes, enquanto outros podem causar grandes danos.</p>
+            <p>Diferentemente do que muitas pessoas podem pensar, quem utiliza os seus conhecimentos de informática para coletar informações, descobrir senhas de acesso a redes e quebrar códigos de segurança em benefício próprio, não são os hackers. Os responsáveis por tais práticas criminosas, na verdade, são os <a href="imagens_videos/cracker.mp4" id="bold-link" class="link">crackers</a>.</p>
+            <p>Embora esse segundo nome não seja tão difundido quanto o primeiro, ele é o correto para se utilizar ao designar alguém que contraria a lei e age sempre em benefício próprio ao cometer delitos virtuais. Os crackers costumam quebrar códigos de segurança de programas, o que faz com que eles se tornem “crackeados”. Já o termo "crack" é usado para se referir a alguma ferramenta (como aplicativos, links e programas) utilizada por crackers para obter acesso a chaves de registro e licenças de produtos pagos.</p>
+            <div style="text-align: center">
+                <img src="imagens_videos/virus.jpg" alt="Imagem ilustrativa de vírus de computador" style="width: 400px;" class="imagem-responsiva">
+            </div>
+            <h3>Diferença entre vírus e malware</h3>
+            <p style="padding-bottom: 15px;">Vírus é muitas vezes um termo genérico usado para se referir a qualquer tipo de software criado para ser prejudicial. Mas um vírus é apenas um tipo de malware, e é definido como um programa de computador que pode se autorreplicar, infectar outros programas e se espalhar para outros computadores.</p>
+            <h2 id="virus_redi">Clique nos 5 tipos de vírus abaixo para conhecê-los:</h2>
+            <ul style="list-style-type: '🦠';">
+                <li><a href="rootkitss.html" class="link">Rootkits</a></li>
+                <li><a href="adware.html" class="link">Adware</a></li>
+                <li><a href="ransomware.html" class="link">Ransomware</a></li>
+                <li><a href="spyware.html" class="link">Spyware</a></li>
+                <li><a href="trojans.html" class="link">Trojan</a></li> 
+            </ul>
+            <h1>O que é antivírus de computador?</h1>
+            <div style="text-align: center; margin: 20px;">
+                <img src="imagens_videos/antivirus.webp" alt="Imagem ilustrativa de antivírus de computador" style="width: 400px; border-radius: 10px;" class="imagem-responsiva">
+            </div>
+            <p>O antivírus é um software que identifica e protege os dispositivos de malwares, também conhecidos como vírus. Esse programa pode ser instalado em computadores e dispositivos móveis, como celulares e tablets.</p>
+            <p>A função mais simples de um antivírus é monitorar arquivos e outros programas de um dispositivo para detectar vírus. Quando novas aplicações são instaladas, o programa faz a verificação delas para saber se existe alguma ação suspeita. Se algo foi identificado, a instalação é bloqueada ou a nova aplicação é encaminhada para a quarentena.</p>
+            <p>A quarentena é um espaço de proteção criptografado e gerenciado pelo antivírus, para que o possível vírus não se espalhe pelo sistema operacional do dispositivo. Arquivos e programas são encaminhados para a quarentena quando o antivírus ainda não identificou exatamente o tipo de vírus ou problema apresentado.</p>
+            <p>Alguns antivírus podem ser específicos para um determinado tipo de vírus, como os antispywares, que são focados em combater spywares e adwares — dois tipos que contaminam navegadores para roubar dados bancários e apresentar banners indesejados.</p>
+            <p style="padding-bottom: 15px;">De modo geral, os programas devem se adaptar às necessidades de diferentes usuários. Por isso, uma versão para computador doméstico não funciona corretamente em um servidor de empresa. Nesse caso, é preciso ir atrás de uma versão corporativa do antivírus escolhido.</p>
+            <h2 id="antivirus_red">Clique nas 5 marcas de antivírus abaixo para conhecê-las:</h2>
+            <ul style="list-style-type: '🛡️';">
+                <li><a href="pagina_antivirus01.html" class="link">Norton antivírus</a></li>
+                <li><a href="pagina_antivirus01.html#kaspersky" class="link">Kaspersky</a></li>
+                <li><a href="pagina_antivirus01.html#bitdefender" class="link">Bitdefender</a></li>
+                <li><a href="pagina_antivirus01.html#mcafee" class="link">McAfee</a></li>
+                <li><a href="pagina_antivirus01.html#avast" class="link">Avast</a></li>
+            </ul>
+            <h2>Assista o vídeo abaixo para entender melhor o que são vírus:</h2>
+            <div id="videodiv">
+                <video src="imagens_videos/virus.mp4" id="video" controls>
+            </div>
+    </main>
+    <div style="max-width: 600px; background-color: white; margin: auto; margin-top: 20px; padding: 10px; border-radius: 5px; box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.351);">
+        <p style="font-weight: bold; margin: 5px;margin-top: 3px;">Fontes:</p>
+        <a href="https://www.avast.com/pt-br/c-computer-virus" target="_blank" style="display: block; padding: 5px;" class="link">O que é vírus de computador</a>
+        <a href="https://static.vecteezy.com/ti/vetor-gratis/p3/16896309-infeccao-por-virus-de-laptop-hacking-de-computador-ilustracao-em-plana-vetor.jpg" target="_blank" style="display: block; padding: 5px;" class="link">Imagem 1</a>
+        <a href="https://www.eset.com/br/artigos/o-que-e-um-antivirus/" target="_blank" style="display: block; padding: 5px;" class="link">O que é um antivírus</a>
+        <a href="https://www.presse-citron.net/app/uploads/2021/07/antivirus-gratuit-pc.jpg" target="_blank" style="display: block; padding: 5px;" class="link">Imagem 2</a>
+        <a href="https://www.pexels.com/pt-br/video/html-vitoria-victory-anonimo-5377684/" target="_blank" style="display: block; padding: 5px;" class="link">Vídeo 1</a>
+        <a href="https://blog.xpeducacao.com.br/cracker-e-hacker/" target="_blank" style="display: block; padding: 5px;" class="link">Qual a diferença entre Cracker e Hacker? Entenda aqui</a>
+    </div>
+    <footer>
+        <p>Página desenvolvida por Camila</p>
+    </footer>
+</body>
+</html>
